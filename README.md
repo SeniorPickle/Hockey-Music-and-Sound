@@ -1,5 +1,5 @@
 # Hockey-Music-and-Sound
-Hockey Music and Sound is an app that integrates with Amazon Music, allowing users to search for songs, select specific portions, and save these segments for quick, custom playback. This app is essentially a soundboard allowing hockey parents/coaches to play neccesary efects and announcments through their speaker.
+Hockey Music and Sound is an app that integrates with Youtube, allowing users to search for songs, select specific portions, and save these segments for quick, custom playback. This app is essentially a soundboard allowing hockey parents/coaches to play neccesary efects and announcments through their speaker.
 ## Table of Contents
 [Outline](#Outline)\
 [Time Allocation](#Time-Allocation)
@@ -8,9 +8,9 @@ Hockey Music and Sound is an app that integrates with Amazon Music, allowing use
 - [ ] = incomplete
 - [X] = complete
 <details>
-<summary>Amazon Music Integration</summary>
+<summary>Youtube Integration</summary>
 
-- [ ] **Song Search:** Users can search for songs available on Amazon Music.
+- [ ] **Song Search:** Users can search for songs available on Youtube Music.
 - [ ] **Song Selection:** Choose songs to access the full or specific sections for playback.
 - [ ] **Playback Permissions:** Ensure compliance with Amazon Music's policies on playback.
 </details>
