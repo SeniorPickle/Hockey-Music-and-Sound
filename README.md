@@ -36,9 +36,11 @@ Hockey Music and Sound is an app that integrates with Youtube, allowing users to
 |What Was Done|Time Spent|Description|
 |---|---|---|
 |Documentation|4 hours|Writing documentation for git readme and development outline for project(seperate from outline in git readme, basically project planning)|
+|Setup|6 hours| Learning BeeWare and setting it up as well as setting up, configuring, and deploying an android emulator (due to ios emulation policies being stricter)|
 </details><details>
 <summary>Dylan Stark</summary>
 
 |What Was Done|Time Spent|Description|
 |---|---|---|
+|Research and setup|3 hours|Setting up beeware to work on my computer, did research on BeeWare and other coding languages for ios|
 </details>
