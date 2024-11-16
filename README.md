@@ -43,5 +43,5 @@ Hockey Music and Sound is an app that integrates with Youtube, allowing users to
 |What Was Done|Time Spent|Description|
 |---|---|---|
 |Research and setup|3 hours|Setting up beeware to work on my computer, did research on BeeWare and other coding languages for ios|
-|Learing beeware and toga, creating an app outline|3.5 hours|read through beeware and toga documentation, watehced tutorial videos, made a test prodject, made a app outline|
+|Learing beeware and toga, creating an app outline|4 hours|read through beeware and toga documentation, watched tutorial videos, made a test prodject, made a app outline|
 </details>
