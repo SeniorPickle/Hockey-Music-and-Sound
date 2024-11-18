@@ -1,0 +1,397 @@
+Date/Time:       2024-11-16 18:30:34 
+Command line:    C:\Users\SmithR\Downloads\PortableGit\MusicHockeyApp\beeware-venv\Scripts\briefcase dev
+
+OS Release:      Windows 11
+OS Version:      10.0.22631
+Architecture:    AMD64
+Platform:        Windows-11-10.0.22631-SP0
+
+Python exe:      C:\Users\SmithR\Downloads\PortableGit\MusicHockeyApp\beeware-venv\Scripts\python.exe
+Python version:  3.12.4 (tags/v3.12.4:8e8a4ba, Jun  6 2024, 19:30:16) [MSC v.1940 64 bit (AMD64)]
+Virtual env:     True
+Conda env:       False
+
+Briefcase:       0.3.20
+Target platform: windows
+Target format:   None
+
+Environment Variables:
+	ALLUSERSPROFILE=C:\ProgramData
+	APPDATA=C:\Users\SmithR\AppData\Roaming
+	ASL.LOG=Destination=file
+	CLASSPATH=.;C:\Program Files (x86)\QuickTime\QTSystem\QTJava.zip
+	COMMONPROGRAMFILES=C:\Program Files\Common Files
+	COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files
+	COMMONPROGRAMW6432=C:\Program Files\Common Files
+	COMPUTERNAME=SMITHR25
+	COMSPEC=C:\WINDOWS\system32\cmd.exe
+	DRIVERDATA=C:\Windows\System32\Drivers\DriverData
+	EFC_9772=1
+	HOMEDRIVE=C:
+	HOMEPATH=\Users\SmithR
+	INTEL_DEV_REDIST=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\
+	JAVA_HOME=C:\Users\SmithR\Downloads\jdk-17.0.12
+	LOCALAPPDATA=C:\Users\SmithR\AppData\Local
+	LOGONSERVER=\\CADETS06DC
+	MIC_LD_LIBRARY_PATH=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\compiler\lib\mic
+	NUMBER_OF_PROCESSORS=8
+	ONEDRIVE=C:\Users\SmithR\OneDrive - Christian Brothers College High School
+	ONEDRIVECOMMERCIAL=C:\Users\SmithR\OneDrive - Christian Brothers College High School
+	OS=Windows_NT
+	PATH=C:\Users\SmithR\Downloads\PortableGit\MusicHockeyApp\beeware-venv\Scripts;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Users\SmithR\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Python312-32;C:\Program Files (x86)\Python312-32\pythonw.exe;C:\Program Files (x86)\Python312-32\python.exe;C:\Program Files (x86)\Python312-32\Scripts\pip.exe;C:\Program Files (x86)\Python312-32\Scripts\pip3.12.exe;C:\Program Files (x86)\Python312-32\Scripts\pip3.exe;C:\Program Files (x86)\Python312-32\Scripts;C:\Users\SmithR\AppData\Local\Microsoft\WinGet\Packages\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\Users\SmithR\Downloads\node-v22.8.0-win-x64\npm.cmd;C:\Users\SmithR\Downloads\node-v22.8.0-win-x64\npx.cmd;C:\Users\SmithR\Downloads\node-v22.8.0-win-x64;C:\Users\SmithR\AppData\Local\Programs\Git\cmd;C:\Users\SmithR\AppData\Local\GitHubDesktop\bin;C:\Users\SmithR\AppData\Local\Programs\Swift\Runtimes\6.0.2\usr\bin\;C:\Users\SmithR\AppData\Local\Programs\Swift\Toolchains\6.0.2+Asserts\usr\bin\;C:\Users\SmithR\AppData\Local\Programs\Swift\Tools\6.0.2\;C:\Users\SmithR\Downloads\flutter\bin;C:\Users\SmithR\Downloads\jdk-17.0.12\bin;
+	PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+	PROCESSOR_ARCHITECTURE=AMD64
+	PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
+	PROCESSOR_LEVEL=6
+	PROCESSOR_REVISION=8c01
+	PROGRAMDATA=C:\ProgramData
+	PROGRAMFILES=C:\Program Files
+	PROGRAMFILES(X86)=C:\Program Files (x86)
+	PROGRAMW6432=C:\Program Files
+	PROMPT=(beeware-venv) $P$G
+	PSMODULEPATH=C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+	PUBLIC=C:\Users\Public
+	QTJAVA=C:\Program Files (x86)\QuickTime\QTSystem\QTJava.zip
+	SDKROOT=C:\Users\SmithR\AppData\Local\Programs\Swift\Platforms\6.0.2\Windows.platform\Developer\SDKs\Windows.sdk\
+	SESSIONNAME=Console
+	SYSTEMDRIVE=C:
+	SYSTEMROOT=C:\WINDOWS
+	TEMP=C:\Users\SmithR\AppData\Local\Temp
+	TMP=C:\Users\SmithR\AppData\Local\Temp
+	UATDATA=C:\WINDOWS\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77
+	USERDNSDOMAIN=CADETS.CBCHS.ORG
+	USERDOMAIN=CADETS
+	USERDOMAIN_ROAMINGPROFILE=CADETS
+	USERNAME=SMITHR
+	USERPROFILE=C:\Users\SmithR
+	VIRTUAL_ENV=C:\Users\SmithR\Downloads\PortableGit\MusicHockeyApp\beeware-venv
+	VIRTUAL_ENV_PROMPT=(beeware-venv) 
+	VXIPNPPATH=C:\Program Files (x86)\IVI Foundation\VISA\
+	WINDIR=C:\WINDOWS
+	ZES_ENABLE_SYSMAN=1
+	_OLD_VIRTUAL_PATH=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Users\SmithR\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Python312-32;C:\Program Files (x86)\Python312-32\pythonw.exe;C:\Program Files (x86)\Python312-32\python.exe;C:\Program Files (x86)\Python312-32\Scripts\pip.exe;C:\Program Files (x86)\Python312-32\Scripts\pip3.12.exe;C:\Program Files (x86)\Python312-32\Scripts\pip3.exe;C:\Program Files (x86)\Python312-32\Scripts;C:\Users\SmithR\AppData\Local\Microsoft\WinGet\Packages\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\Users\SmithR\Downloads\node-v22.8.0-win-x64\npm.cmd;C:\Users\SmithR\Downloads\node-v22.8.0-win-x64\npx.cmd;C:\Users\SmithR\Downloads\node-v22.8.0-win-x64;C:\Users\SmithR\AppData\Local\Programs\Git\cmd;C:\Users\SmithR\AppData\Local\GitHubDesktop\bin;C:\Users\SmithR\AppData\Local\Programs\Swift\Runtimes\6.0.2\usr\bin\;C:\Users\SmithR\AppData\Local\Programs\Swift\Toolchains\6.0.2+Asserts\usr\bin\;C:\Users\SmithR\AppData\Local\Programs\Swift\Tools\6.0.2\;C:\Users\SmithR\Downloads\flutter\bin;C:\Users\SmithR\Downloads\jdk-17.0.12\bin;
+	_OLD_VIRTUAL_PROMPT=$P$G
+
+pyproject.toml:
+# This project was generated with 0.3.20 using template: https://github.com/beeware/briefcase-template@v0.3.20
+[tool.briefcase]
+project_name = "Music Hockey App"
+bundle = "com.example"
+version = "0.0.1"
+url = "https://example.com/musichockeyapp"
+license.file = "LICENSE"
+author = "Stark Industries"
+author_email = "smithr@cbchs.org"
+
+[tool.briefcase.app.musichockeyapp]
+formal_name = "Music Hockey App"
+description = "Plays music and sound effects required during hockey game"
+long_description = """More details about the app should go here.
+"""
+sources = [
+    "src/musichockeyapp",
+]
+test_sources = [
+    "tests",
+]
+
+requires = [
+]
+test_requires = [
+    "pytest",
+]
+
+[tool.briefcase.app.musichockeyapp.macOS]
+universal_build = true
+requires = [
+    "toga-cocoa~=0.4.7",
+    "std-nslog~=1.0.3",
+]
+
+[tool.briefcase.app.musichockeyapp.linux]
+requires = [
+    "toga-gtk~=0.4.7",
+]
+
+[tool.briefcase.app.musichockeyapp.linux.system.debian]
+system_requires = [
+    # Needed to compile pycairo wheel
+    "libcairo2-dev",
+    # Needed to compile PyGObject wheel
+    "libgirepository1.0-dev",
+]
+
+system_runtime_requires = [
+    # Needed to provide GTK and its GI bindings
+    "gir1.2-gtk-3.0",
+    "libgirepository-1.0-1",
+    # Dependencies that GTK looks for at runtime
+    "libcanberra-gtk3-module",
+    # Needed to provide WebKit2 at runtime
+    # Note: Debian 11 and Ubuntu 20.04 require gir1.2-webkit2-4.0 instead
+    # "gir1.2-webkit2-4.1",
+]
+
+[tool.briefcase.app.musichockeyapp.linux.system.rhel]
+system_requires = [
+    # Needed to compile pycairo wheel
+    "cairo-gobject-devel",
+    # Needed to compile PyGObject wheel
+    "gobject-introspection-devel",
+]
+
+system_runtime_requires = [
+    # Needed to support Python bindings to GTK
+    "gobject-introspection",
+    # Needed to provide GTK
+    "gtk3",
+    # Dependencies that GTK looks for at runtime
+    "libcanberra-gtk3",
+    # Needed to provide WebKit2 at runtime
+    # "webkit2gtk3",
+]
+
+[tool.briefcase.app.musichockeyapp.linux.system.suse]
+system_requires = [
+    # Needed to compile pycairo wheel
+    "cairo-devel",
+    # Needed to compile PyGObject wheel
+    "gobject-introspection-devel",
+]
+
+system_runtime_requires = [
+    # Needed to provide GTK
+    "gtk3",
+    # Needed to support Python bindings to GTK
+    "gobject-introspection", "typelib(Gtk) = 3.0",
+    # Dependencies that GTK looks for at runtime
+    "libcanberra-gtk3-module",
+    # Needed to provide WebKit2 at runtime
+    # "libwebkit2gtk3", "typelib(WebKit2)",
+]
+
+[tool.briefcase.app.musichockeyapp.linux.system.arch]
+system_requires = [
+    # Needed to compile pycairo wheel
+    "cairo",
+    # Needed to compile PyGObject wheel
+    "gobject-introspection",
+    # Runtime dependencies that need to exist so that the
+    # Arch package passes final validation.
+    # Needed to provide GTK
+    "gtk3",
+    # Dependencies that GTK looks for at runtime
+    "libcanberra",
+    # Needed to provide WebKit2
+    # "webkit2gtk",
+]
+
+system_runtime_requires = [
+    # Needed to provide GTK
+    "gtk3",
+    # Needed to provide PyGObject bindings
+    "gobject-introspection-runtime",
+    # Dependencies that GTK looks for at runtime
+    "libcanberra",
+    # Needed to provide WebKit2 at runtime
+    # "webkit2gtk",
+]
+
+[tool.briefcase.app.musichockeyapp.linux.appimage]
+manylinux = "manylinux_2_28"
+
+system_requires = [
+    # Needed to compile pycairo wheel
+    "cairo-gobject-devel",
+    # Needed to compile PyGObject wheel
+    "gobject-introspection-devel",
+    # Needed to provide GTK
+    "gtk3-devel",
+    # Dependencies that GTK looks for at runtime, that need to be
+    # in the build environment to be picked up by linuxdeploy
+    "libcanberra-gtk3",
+    "PackageKit-gtk3-module",
+    "gvfs-client",
+]
+
+linuxdeploy_plugins = [
+    "DEPLOY_GTK_VERSION=3 gtk",
+]
+
+[tool.briefcase.app.musichockeyapp.linux.flatpak]
+flatpak_runtime = "org.gnome.Platform"
+flatpak_runtime_version = "47"
+flatpak_sdk = "org.gnome.Sdk"
+
+[tool.briefcase.app.musichockeyapp.windows]
+requires = [
+    "toga-winforms~=0.4.7",
+]
+
+# Mobile deployments
+[tool.briefcase.app.musichockeyapp.iOS]
+requires = [
+    "toga-iOS~=0.4.7",
+    "std-nslog~=1.0.3",
+]
+
+[tool.briefcase.app.musichockeyapp.android]
+requires = [
+    "toga-android~=0.4.7",
+]
+
+base_theme = "Theme.MaterialComponents.Light.DarkActionBar"
+
+build_gradle_dependencies = [
+    "com.google.android.material:material:1.12.0",
+    # Needed for DetailedList
+    # "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0",
+    # Needed for MapView
+    # "org.osmdroid:osmdroid-android:6.1.20",
+]
+
+# Web deployments
+[tool.briefcase.app.musichockeyapp.web]
+requires = [
+    "toga-web~=0.4.7",
+]
+style_framework = "Shoelace v2.3"
+
+Briefcase Log:
+[18:30:33]                                                                                                                                                                dev.py:250
+           [musichockeyapp] Starting in dev mode...                                                                                                                       dev.py:250
+                                                                                                                                                                   subprocess.py:827
+           >>> Running Command:                                                                                                                                    subprocess.py:827
+           >>>     'C:\Users\SmithR\Downloads\PortableGit\MusicHockeyApp\beeware-venv\Scripts\python.exe' -c 'import runpy,                                        subprocess.py:827
+           sys;sys.path.pop(0);sys.argv.extend([]);runpy.run_module("musichockeyapp", run_name="__main__", alter_sys=True)'                                                         
+           >>> Working Directory:                                                                                                                                  subprocess.py:827
+           >>>     C:\Users\SmithR                                                                                                                                 subprocess.py:827
+           >>> Environment Overrides:                                                                                                                              subprocess.py:827
+           >>>     PYTHONPATH=C:\Users\SmithR\Downloads\Hockey-Music-and-Sound-dylan\musichockeyapp\src                                                            subprocess.py:827
+           >>>     PYTHONMALLOC=default                                                                                                                            subprocess.py:827
+           >>>     PYTHONUNBUFFERED=1                                                                                                                              subprocess.py:827
+           >>>     PYTHONDEVMODE=1                                                                                                                                 subprocess.py:827
+           >>>     PYTHONUTF8=1                                                                                                                                    subprocess.py:827
+           ===========================================================================                                                                                    run.py:171
+           Traceback (most recent call last):                                                                                                                      subprocess.py:195
+             File "<string>", line 1, in <module>                                                                                                                  subprocess.py:195
+             File "<frozen runpy>", line 226, in run_module                                                                                                        subprocess.py:195
+             File "<frozen runpy>", line 98, in _run_module_code                                                                                                   subprocess.py:195
+             File "<frozen runpy>", line 88, in _run_code                                                                                                          subprocess.py:195
+             File "C:\Users\SmithR\Downloads\Hockey-Music-and-Sound-dylan\musichockeyapp\src\musichockeyapp\__main__.py", line 1, in <module>                      subprocess.py:195
+               from musichockeyapp.app import main                                                                                                                 subprocess.py:195
+             File "C:\Users\SmithR\Downloads\Hockey-Music-and-Sound-dylan\musichockeyapp\src\musichockeyapp\app.py", line 23                                       subprocess.py:195
+               music_import_button = toga.Button("Import", style=Pack(text_align=RIGHT, on_press=self.import, font_size=10,padding=(5,5,5,0)))                     subprocess.py:195
+                                                                                                      ^^^^^^                                                       subprocess.py:195
+           SyntaxError: invalid syntax                                                                                                                             subprocess.py:195
+                                                                                                                                                                      __main__.py:44
+           Problem running app musichockeyapp.                                                                                                                        __main__.py:45
+           Saving log... started                                                                                                                                      console.py:391
+
+Main thread traceback:
+╭─────────────────────────────────────────────────────────────────────── Traceback (most recent call last) ────────────────────────────────────────────────────────────────────────╮
+│ C:\Users\SmithR\Downloads\PortableGit\MusicHockeyApp\beeware-venv\Lib\site-packages\briefcase\__main__.py:29 in main                                                             │
+│                                                                                                                                                                                  │
+│   26 │   │   │   Path.cwd() / "pyproject.toml",                                                                                                                                  │
+│   27 │   │   │   overrides=overrides,                                                                                                                                            │
+│   28 │   │   )                                                                                                                                                                   │
+│ ❱ 29 │   │   command(**options)                                                                                                                                                  │
+│   30 │   except HelpText as e:                                                                                                                                                   │
+│   31 │   │   logger.info()                                                                                                                                                       │
+│   32 │   │   logger.info(str(e))                                                                                                                                                 │
+│                                                                                                                                                                                  │
+│ ╭──────────────────────────────────────────────────────── locals ─────────────────────────────────────────────────────────╮                                                      │
+│ │       command = <briefcase.commands.dev.DevCommand object at 0x0000014E53E14C50>                                        │                                                      │
+│ │       console = <briefcase.console.Console object at 0x0000014E54E19E80>                                                │                                                      │
+│ │             e = BriefcaseCommandError('Problem running app musichockeyapp.')                                            │                                                      │
+│ │ extra_cmdline = []                                                                                                      │                                                      │
+│ │        logger = <briefcase.console.Log object at 0x0000014E54E19D00>                                                    │                                                      │
+│ │       options = {'appname': None, 'update_requirements': False, 'run_app': True, 'test_mode': False, 'passthrough': []} │                                                      │
+│ │     overrides = {}                                                                                                      │                                                      │
+│ │       printer = <briefcase.console.Printer object at 0x0000014E51D79D30>                                                │                                                      │
+│ │        result = 200                                                                                                     │                                                      │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                      │
+│                                                                                                                                                                                  │
+│ C:\Users\SmithR\Downloads\PortableGit\MusicHockeyApp\beeware-venv\Lib\site-packages\briefcase\commands\dev.py:252 in __call__                                                    │
+│                                                                                                                                                                                  │
+│   249 │   │   │   else:                                                                                                                                                          │
+│   250 │   │   │   │   self.logger.info("Starting in dev mode...", prefix=app.app_name)                                                                                           │
+│   251 │   │   │   env = self.get_environment(app, test_mode=test_mode)                                                                                                           │
+│ ❱ 252 │   │   │   return self.run_dev_app(                                                                                                                                       │
+│   253 │   │   │   │   app,                                                                                                                                                       │
+│   254 │   │   │   │   env,                                                                                                                                                       │
+│   255 │   │   │   │   test_mode=test_mode,                                                                                                                                       │
+│                                                                                                                                                                                  │
+│ ╭──────────────────────────────────────────────────────────────── locals ─────────────────────────────────────────────────────────────────╮                                      │
+│ │                 app = <com.example.musichockeyapp v0.0.1 AppConfig>                                                                     │                                      │
+│ │             appname = None                                                                                                              │                                      │
+│ │      dist_info_path = WindowsPath('C:/Users/SmithR/Downloads/Hockey-Music-and-Sound-dylan/musichockeyapp/src/musichockeyapp.dist-info') │                                      │
+│ │                 env = {                                                                                                                 │                                      │
+│ │                       │   'PYTHONPATH': 'C:\\Users\\SmithR\\Downloads\\Hockey-Music-and-Sound-dylan\\musichockeyapp\\src',              │                                      │
+│ │                       │   'PYTHONMALLOC': 'default',                                                                                    │                                      │
+│ │                       │   'PYTHONUNBUFFERED': '1',                                                                                      │                                      │
+│ │                       │   'PYTHONDEVMODE': '1',                                                                                         │                                      │
+│ │                       │   'PYTHONUTF8': '1'                                                                                             │                                      │
+│ │                       }                                                                                                                 │                                      │
+│ │             options = {}                                                                                                                │                                      │
+│ │         passthrough = []                                                                                                                │                                      │
+│ │             run_app = True                                                                                                              │                                      │
+│ │                self = <briefcase.commands.dev.DevCommand object at 0x0000014E53E14C50>                                                  │                                      │
+│ │           test_mode = False                                                                                                             │                                      │
+│ │ update_requirements = False                                                                                                             │                                      │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                      │
+│                                                                                                                                                                                  │
+│ C:\Users\SmithR\Downloads\PortableGit\MusicHockeyApp\beeware-venv\Lib\site-packages\briefcase\commands\dev.py:169 in run_dev_app                                                 │
+│                                                                                                                                                                                  │
+│   166 │   │   │   )                                                                                                                                                              │
+│   167 │   │   │                                                                                                                                                                  │
+│   168 │   │   │   # Start streaming logs for the app.                                                                                                                            │
+│ ❱ 169 │   │   │   self._stream_app_logs(                                                                                                                                         │
+│   170 │   │   │   │   app,                                                                                                                                                       │
+│   171 │   │   │   │   popen=app_popen,                                                                                                                                           │
+│   172 │   │   │   │   test_mode=test_mode,                                                                                                                                       │
+│                                                                                                                                                                                  │
+│ ╭────────────────────────────────────────────────────── locals ──────────────────────────────────────────────────────╮                                                           │
+│ │         app = <com.example.musichockeyapp v0.0.1 AppConfig>                                                        │                                                           │
+│ │   app_popen = <Popen: returncode: 1 args: ['C:\\Users\\SmithR\\Downloads\\PortableGit\\Mus...>                     │                                                           │
+│ │     cmdline = [                                                                                                    │                                                           │
+│ │               │   'C:\\Users\\SmithR\\Downloads\\PortableGit\\MusicHockeyApp\\beeware-venv\\Scripts\\python'+4,    │                                                           │
+│ │               │   '-c',                                                                                            │                                                           │
+│ │               │   'import runpy, sys;sys.path.pop(0);sys.argv.extend([]);runpy.run_module("musichoc'+45            │                                                           │
+│ │               ]                                                                                                    │                                                           │
+│ │         env = {                                                                                                    │                                                           │
+│ │               │   'PYTHONPATH': 'C:\\Users\\SmithR\\Downloads\\Hockey-Music-and-Sound-dylan\\musichockeyapp\\src', │                                                           │
+│ │               │   'PYTHONMALLOC': 'default',                                                                       │                                                           │
+│ │               │   'PYTHONUNBUFFERED': '1',                                                                         │                                                           │
+│ │               │   'PYTHONDEVMODE': '1',                                                                            │                                                           │
+│ │               │   'PYTHONUTF8': '1'                                                                                │                                                           │
+│ │               }                                                                                                    │                                                           │
+│ │ main_module = 'musichockeyapp'                                                                                     │                                                           │
+│ │     options = {}                                                                                                   │                                                           │
+│ │ passthrough = []                                                                                                   │                                                           │
+│ │        self = <briefcase.commands.dev.DevCommand object at 0x0000014E53E14C50>                                     │                                                           │
+│ │   test_mode = False                                                                                                │                                                           │
+│ ╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                           │
+│                                                                                                                                                                                  │
+│ C:\Users\SmithR\Downloads\PortableGit\MusicHockeyApp\beeware-venv\Lib\site-packages\briefcase\commands\run.py:202 in _stream_app_logs                                            │
+│                                                                                                                                                                                  │
+│   199 │   │   │   │   # If we're monitoring an actual app (not just a log stream),                                                                                               │
+│   200 │   │   │   │   # and the app didn't exit cleanly, surface the error to the user.                                                                                          │
+│   201 │   │   │   │   if popen.poll() != 0:                                                                                                                                      │
+│ ❱ 202 │   │   │   │   │   raise BriefcaseCommandError(f"Problem running app {app.app_name}.")                                                                                    │
+│   203 │   │                                                                                                                                                                      │
+│   204 │   │   except KeyboardInterrupt:                                                                                                                                          │
+│   205 │   │   │   pass  # Catch CTRL-C to exit normally                                                                                                                          │
+│                                                                                                                                                                                  │
+│ ╭──────────────────────────────────────────── locals ─────────────────────────────────────────────╮                                                                              │
+│ │          app = <com.example.musichockeyapp v0.0.1 AppConfig>                                    │                                                                              │
+│ │ clean_filter = None                                                                             │                                                                              │
+│ │ clean_output = False                                                                            │                                                                              │
+│ │   log_filter = <briefcase.commands.run.LogFilter object at 0x0000014E54DEDC10>                  │                                                                              │
+│ │   log_stream = False                                                                            │                                                                              │
+│ │        popen = <Popen: returncode: 1 args: ['C:\\Users\\SmithR\\Downloads\\PortableGit\\Mus...> │                                                                              │
+│ │         self = <briefcase.commands.dev.DevCommand object at 0x0000014E53E14C50>                 │                                                                              │
+│ │    test_mode = False                                                                            │                                                                              │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────╯                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+BriefcaseCommandError: Problem running app musichockeyapp.

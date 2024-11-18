@@ -1,0 +1,451 @@
+Date/Time:       2024-11-16 18:14:21 
+Command line:    C:\Users\SmithR\Downloads\PortableGit\MusicHockeyApp\beeware-venv\Scripts\briefcase build android
+
+OS Release:      Windows 11
+OS Version:      10.0.22631
+Architecture:    AMD64
+Platform:        Windows-11-10.0.22631-SP0
+
+Python exe:      C:\Users\SmithR\Downloads\PortableGit\MusicHockeyApp\beeware-venv\Scripts\python.exe
+Python version:  3.12.4 (tags/v3.12.4:8e8a4ba, Jun  6 2024, 19:30:16) [MSC v.1940 64 bit (AMD64)]
+Virtual env:     True
+Conda env:       False
+
+Briefcase:       0.3.20
+Target platform: android
+Target format:   gradle
+
+Environment Variables:
+	ALLUSERSPROFILE=C:\ProgramData
+	APPDATA=C:\Users\SmithR\AppData\Roaming
+	ASL.LOG=Destination=file
+	CLASSPATH=.;C:\Program Files (x86)\QuickTime\QTSystem\QTJava.zip
+	COMMONPROGRAMFILES=C:\Program Files\Common Files
+	COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files
+	COMMONPROGRAMW6432=C:\Program Files\Common Files
+	COMPUTERNAME=SMITHR25
+	COMSPEC=C:\WINDOWS\system32\cmd.exe
+	DRIVERDATA=C:\Windows\System32\Drivers\DriverData
+	EFC_9772=1
+	HOMEDRIVE=C:
+	HOMEPATH=\Users\SmithR
+	INTEL_DEV_REDIST=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\
+	JAVA_HOME=C:\Users\SmithR\Downloads\jdk-17.0.12
+	LOCALAPPDATA=C:\Users\SmithR\AppData\Local
+	LOGONSERVER=\\CADETS06DC
+	MIC_LD_LIBRARY_PATH=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\compiler\lib\mic
+	NUMBER_OF_PROCESSORS=8
+	ONEDRIVE=C:\Users\SmithR\OneDrive - Christian Brothers College High School
+	ONEDRIVECOMMERCIAL=C:\Users\SmithR\OneDrive - Christian Brothers College High School
+	OS=Windows_NT
+	PATH=C:\Users\SmithR\Downloads\PortableGit\MusicHockeyApp\beeware-venv\Scripts;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Users\SmithR\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Python312-32;C:\Program Files (x86)\Python312-32\pythonw.exe;C:\Program Files (x86)\Python312-32\python.exe;C:\Program Files (x86)\Python312-32\Scripts\pip.exe;C:\Program Files (x86)\Python312-32\Scripts\pip3.12.exe;C:\Program Files (x86)\Python312-32\Scripts\pip3.exe;C:\Program Files (x86)\Python312-32\Scripts;C:\Users\SmithR\AppData\Local\Microsoft\WinGet\Packages\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\Users\SmithR\Downloads\node-v22.8.0-win-x64\npm.cmd;C:\Users\SmithR\Downloads\node-v22.8.0-win-x64\npx.cmd;C:\Users\SmithR\Downloads\node-v22.8.0-win-x64;C:\Users\SmithR\AppData\Local\Programs\Git\cmd;C:\Users\SmithR\AppData\Local\GitHubDesktop\bin;C:\Users\SmithR\AppData\Local\Programs\Swift\Runtimes\6.0.2\usr\bin\;C:\Users\SmithR\AppData\Local\Programs\Swift\Toolchains\6.0.2+Asserts\usr\bin\;C:\Users\SmithR\AppData\Local\Programs\Swift\Tools\6.0.2\;C:\Users\SmithR\Downloads\flutter\bin;C:\Users\SmithR\Downloads\jdk-17.0.12\bin;
+	PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+	PROCESSOR_ARCHITECTURE=AMD64
+	PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
+	PROCESSOR_LEVEL=6
+	PROCESSOR_REVISION=8c01
+	PROGRAMDATA=C:\ProgramData
+	PROGRAMFILES=C:\Program Files
+	PROGRAMFILES(X86)=C:\Program Files (x86)
+	PROGRAMW6432=C:\Program Files
+	PROMPT=(beeware-venv) $P$G
+	PSMODULEPATH=C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+	PUBLIC=C:\Users\Public
+	QTJAVA=C:\Program Files (x86)\QuickTime\QTSystem\QTJava.zip
+	SDKROOT=C:\Users\SmithR\AppData\Local\Programs\Swift\Platforms\6.0.2\Windows.platform\Developer\SDKs\Windows.sdk\
+	SESSIONNAME=Console
+	SYSTEMDRIVE=C:
+	SYSTEMROOT=C:\WINDOWS
+	TEMP=C:\Users\SmithR\AppData\Local\Temp
+	TMP=C:\Users\SmithR\AppData\Local\Temp
+	UATDATA=C:\WINDOWS\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77
+	USERDNSDOMAIN=CADETS.CBCHS.ORG
+	USERDOMAIN=CADETS
+	USERDOMAIN_ROAMINGPROFILE=CADETS
+	USERNAME=SMITHR
+	USERPROFILE=C:\Users\SmithR
+	VIRTUAL_ENV=C:\Users\SmithR\Downloads\PortableGit\MusicHockeyApp\beeware-venv
+	VIRTUAL_ENV_PROMPT=(beeware-venv) 
+	VXIPNPPATH=C:\Program Files (x86)\IVI Foundation\VISA\
+	WINDIR=C:\WINDOWS
+	ZES_ENABLE_SYSMAN=1
+	_OLD_VIRTUAL_PATH=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Users\SmithR\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Python312-32;C:\Program Files (x86)\Python312-32\pythonw.exe;C:\Program Files (x86)\Python312-32\python.exe;C:\Program Files (x86)\Python312-32\Scripts\pip.exe;C:\Program Files (x86)\Python312-32\Scripts\pip3.12.exe;C:\Program Files (x86)\Python312-32\Scripts\pip3.exe;C:\Program Files (x86)\Python312-32\Scripts;C:\Users\SmithR\AppData\Local\Microsoft\WinGet\Packages\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\Users\SmithR\Downloads\node-v22.8.0-win-x64\npm.cmd;C:\Users\SmithR\Downloads\node-v22.8.0-win-x64\npx.cmd;C:\Users\SmithR\Downloads\node-v22.8.0-win-x64;C:\Users\SmithR\AppData\Local\Programs\Git\cmd;C:\Users\SmithR\AppData\Local\GitHubDesktop\bin;C:\Users\SmithR\AppData\Local\Programs\Swift\Runtimes\6.0.2\usr\bin\;C:\Users\SmithR\AppData\Local\Programs\Swift\Toolchains\6.0.2+Asserts\usr\bin\;C:\Users\SmithR\AppData\Local\Programs\Swift\Tools\6.0.2\;C:\Users\SmithR\Downloads\flutter\bin;C:\Users\SmithR\Downloads\jdk-17.0.12\bin;
+	_OLD_VIRTUAL_PROMPT=$P$G
+
+pyproject.toml:
+# This project was generated with 0.3.20 using template: https://github.com/beeware/briefcase-template@v0.3.20
+[tool.briefcase]
+project_name = "Music Hockey App"
+bundle = "com.example"
+version = "0.0.1"
+url = "https://example.com/musichockeyapp"
+license.file = "LICENSE"
+author = "Stark Industries"
+author_email = "smithr@cbchs.org"
+
+[tool.briefcase.app.musichockeyapp]
+formal_name = "Music Hockey App"
+description = "Plays music and sound effects required during hockey game"
+long_description = """More details about the app should go here.
+"""
+sources = [
+    "src/musichockeyapp",
+]
+test_sources = [
+    "tests",
+]
+
+requires = [
+]
+test_requires = [
+    "pytest",
+]
+
+[tool.briefcase.app.musichockeyapp.macOS]
+universal_build = true
+requires = [
+    "toga-cocoa~=0.4.7",
+    "std-nslog~=1.0.3",
+]
+
+[tool.briefcase.app.musichockeyapp.linux]
+requires = [
+    "toga-gtk~=0.4.7",
+]
+
+[tool.briefcase.app.musichockeyapp.linux.system.debian]
+system_requires = [
+    # Needed to compile pycairo wheel
+    "libcairo2-dev",
+    # Needed to compile PyGObject wheel
+    "libgirepository1.0-dev",
+]
+
+system_runtime_requires = [
+    # Needed to provide GTK and its GI bindings
+    "gir1.2-gtk-3.0",
+    "libgirepository-1.0-1",
+    # Dependencies that GTK looks for at runtime
+    "libcanberra-gtk3-module",
+    # Needed to provide WebKit2 at runtime
+    # Note: Debian 11 and Ubuntu 20.04 require gir1.2-webkit2-4.0 instead
+    # "gir1.2-webkit2-4.1",
+]
+
+[tool.briefcase.app.musichockeyapp.linux.system.rhel]
+system_requires = [
+    # Needed to compile pycairo wheel
+    "cairo-gobject-devel",
+    # Needed to compile PyGObject wheel
+    "gobject-introspection-devel",
+]
+
+system_runtime_requires = [
+    # Needed to support Python bindings to GTK
+    "gobject-introspection",
+    # Needed to provide GTK
+    "gtk3",
+    # Dependencies that GTK looks for at runtime
+    "libcanberra-gtk3",
+    # Needed to provide WebKit2 at runtime
+    # "webkit2gtk3",
+]
+
+[tool.briefcase.app.musichockeyapp.linux.system.suse]
+system_requires = [
+    # Needed to compile pycairo wheel
+    "cairo-devel",
+    # Needed to compile PyGObject wheel
+    "gobject-introspection-devel",
+]
+
+system_runtime_requires = [
+    # Needed to provide GTK
+    "gtk3",
+    # Needed to support Python bindings to GTK
+    "gobject-introspection", "typelib(Gtk) = 3.0",
+    # Dependencies that GTK looks for at runtime
+    "libcanberra-gtk3-module",
+    # Needed to provide WebKit2 at runtime
+    # "libwebkit2gtk3", "typelib(WebKit2)",
+]
+
+[tool.briefcase.app.musichockeyapp.linux.system.arch]
+system_requires = [
+    # Needed to compile pycairo wheel
+    "cairo",
+    # Needed to compile PyGObject wheel
+    "gobject-introspection",
+    # Runtime dependencies that need to exist so that the
+    # Arch package passes final validation.
+    # Needed to provide GTK
+    "gtk3",
+    # Dependencies that GTK looks for at runtime
+    "libcanberra",
+    # Needed to provide WebKit2
+    # "webkit2gtk",
+]
+
+system_runtime_requires = [
+    # Needed to provide GTK
+    "gtk3",
+    # Needed to provide PyGObject bindings
+    "gobject-introspection-runtime",
+    # Dependencies that GTK looks for at runtime
+    "libcanberra",
+    # Needed to provide WebKit2 at runtime
+    # "webkit2gtk",
+]
+
+[tool.briefcase.app.musichockeyapp.linux.appimage]
+manylinux = "manylinux_2_28"
+
+system_requires = [
+    # Needed to compile pycairo wheel
+    "cairo-gobject-devel",
+    # Needed to compile PyGObject wheel
+    "gobject-introspection-devel",
+    # Needed to provide GTK
+    "gtk3-devel",
+    # Dependencies that GTK looks for at runtime, that need to be
+    # in the build environment to be picked up by linuxdeploy
+    "libcanberra-gtk3",
+    "PackageKit-gtk3-module",
+    "gvfs-client",
+]
+
+linuxdeploy_plugins = [
+    "DEPLOY_GTK_VERSION=3 gtk",
+]
+
+[tool.briefcase.app.musichockeyapp.linux.flatpak]
+flatpak_runtime = "org.gnome.Platform"
+flatpak_runtime_version = "47"
+flatpak_sdk = "org.gnome.Sdk"
+
+[tool.briefcase.app.musichockeyapp.windows]
+requires = [
+    "toga-winforms~=0.4.7",
+]
+
+# Mobile deployments
+[tool.briefcase.app.musichockeyapp.iOS]
+requires = [
+    "toga-iOS~=0.4.7",
+    "std-nslog~=1.0.3",
+]
+
+[tool.briefcase.app.musichockeyapp.android]
+requires = [
+    "toga-android~=0.4.7",
+]
+
+base_theme = "Theme.MaterialComponents.Light.DarkActionBar"
+
+build_gradle_dependencies = [
+    "com.google.android.material:material:1.12.0",
+    # Needed for DetailedList
+    # "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0",
+    # Needed for MapView
+    # "org.osmdroid:osmdroid-android:6.1.20",
+]
+
+# Web deployments
+[tool.briefcase.app.musichockeyapp.web]
+requires = [
+    "toga-web~=0.4.7",
+]
+style_framework = "Shoelace v2.3"
+
+Briefcase Log:
+[18:13:26]                                                                                                                                                               java.py:111
+           [Java JDK] Evaluating JAVA_HOME...                                                                                                                            java.py:111
+           JAVA_HOME=C:\Users\SmithR\Downloads\jdk-17.0.12                                                                                                               java.py:112
+                                                                                                                                                                   subprocess.py:827
+           >>> Running Command:                                                                                                                                    subprocess.py:827
+           >>>     'C:\Users\SmithR\Downloads\jdk-17.0.12\bin\javac' -version                                                                                      subprocess.py:827
+           >>> Working Directory:                                                                                                                                  subprocess.py:827
+           >>>     C:\Users\SmithR\Downloads\Hockey-Music-and-Sound-dylan\musichockeyapp                                                                           subprocess.py:827
+[18:13:27] >>> Command Output:                                                                                                                                     subprocess.py:827
+           >>>     javac 17.0.12                                                                                                                                   subprocess.py:827
+           >>> Return code: 0                                                                                                                                      subprocess.py:827
+           Using JDK at C:\Users\SmithR\Downloads\jdk-17.0.12                                                                                                            java.py:258
+                                                                                                                                                                  android_sdk.py:348
+           [android_sdk] The Android SDK was not found; downloading and installing...                                                                             android_sdk.py:348
+           To use an existing Android SDK instance, specify its root directory path in the ANDROID_HOME environment variable.                                     android_sdk.py:352
+                                                                                                                                                                  android_sdk.py:356
+           Downloading commandlinetools-win-11076708_latest.zip...                                                                                                       file.py:210
+[18:13:56] Installing Android SDK Command-Line Tools 12.0... started                                                                                              android_sdk.py:405
+[18:14:01] Installing Android SDK Command-Line Tools 12.0... done                                                                                                 android_sdk.py:405
+           Removing older Android SDK packages... started                                                                                                         android_sdk.py:444
+           Removing older Android SDK packages... done                                                                                                            android_sdk.py:444
+                                                                                                                                                                  android_sdk.py:585
+           The Android tools provided by Google have license terms that you must accept                                                                           android_sdk.py:585
+           before you may use those tools.                                                                                                                        android_sdk.py:585
+                                                                                                                                                                   subprocess.py:827
+           >>> Running Command:                                                                                                                                    subprocess.py:827
+           >>>     'C:\Users\SmithR\AppData\Local\BeeWare\briefcase\Cache\tools\android_sdk\cmdline-tools\12.0\bin\sdkmanager.bat' --licenses                      subprocess.py:827
+           >>> Working Directory:                                                                                                                                  subprocess.py:827
+           >>>     C:\Users\SmithR\Downloads\Hockey-Music-and-Sound-dylan\musichockeyapp                                                                           subprocess.py:827
+           >>> Environment Overrides:                                                                                                                              subprocess.py:827
+           >>>     ANDROID_HOME=C:\Users\SmithR\AppData\Local\BeeWare\briefcase\Cache\tools\android_sdk                                                            subprocess.py:827
+           >>>     ANDROID_SDK_ROOT=C:\Users\SmithR\AppData\Local\BeeWare\briefcase\Cache\tools\android_sdk                                                        subprocess.py:827
+           >>>     JAVA_HOME=C:\Users\SmithR\Downloads\jdk-17.0.12                                                                                                 subprocess.py:827
+[18:14:20] >>> Return code: 0                                                                                                                                      subprocess.py:827
+                                                                                                                                                                      __main__.py:44
+           You did not accept the Android SDK licenses. Please re-run the briefcase command                                                                           __main__.py:45
+           and accept the Android SDK license when prompted. You may need an Internet                                                                                 __main__.py:45
+           connection.                                                                                                                                                __main__.py:45
+           Saving log... started                                                                                                                                      console.py:391
+
+Main thread traceback:
+╭─────────────────────────────────────────────────────────────────────── Traceback (most recent call last) ────────────────────────────────────────────────────────────────────────╮
+│ C:\Users\SmithR\Downloads\PortableGit\MusicHockeyApp\beeware-venv\Lib\site-packages\briefcase\__main__.py:29 in main                                                             │
+│                                                                                                                                                                                  │
+│   26 │   │   │   Path.cwd() / "pyproject.toml",                                                                                                                                  │
+│   27 │   │   │   overrides=overrides,                                                                                                                                            │
+│   28 │   │   )                                                                                                                                                                   │
+│ ❱ 29 │   │   command(**options)                                                                                                                                                  │
+│   30 │   except HelpText as e:                                                                                                                                                   │
+│   31 │   │   logger.info()                                                                                                                                                       │
+│   32 │   │   logger.info(str(e))                                                                                                                                                 │
+│                                                                                                                                                                                  │
+│ ╭─────────────────────────────────────────────────────────────────────────────────── locals ───────────────────────────────────────────────────────────────────────────────────╮ │
+│ │       command = <briefcase.platforms.android.gradle.GradleBuildCommand object at 0x0000016A84BE9DF0>                                                                         │ │
+│ │       console = <briefcase.console.Console object at 0x0000016A84BE9D90>                                                                                                     │ │
+│ │             e = BriefcaseCommandError('You did not accept the Android SDK licenses. Please re-run the briefcase command\nand accept the Android SDK license when prompted.   │ │
+│ │                 You may need an Internet\nconnection.\n')                                                                                                                    │ │
+│ │ extra_cmdline = []                                                                                                                                                           │ │
+│ │        logger = <briefcase.console.Log object at 0x0000016A84BE9C70>                                                                                                         │ │
+│ │       options = {                                                                                                                                                            │ │
+│ │                 │   'update': False,                                                                                                                                         │ │
+│ │                 │   'update_requirements': False,                                                                                                                            │ │
+│ │                 │   'update_support': False,                                                                                                                                 │ │
+│ │                 │   'update_stub': False,                                                                                                                                    │ │
+│ │                 │   'update_resources': False,                                                                                                                               │ │
+│ │                 │   'no_update': False,                                                                                                                                      │ │
+│ │                 │   'test_mode': False                                                                                                                                       │ │
+│ │                 }                                                                                                                                                            │ │
+│ │     overrides = {}                                                                                                                                                           │ │
+│ │       printer = <briefcase.console.Printer object at 0x0000016A81AE5910>                                                                                                     │ │
+│ │        result = 200                                                                                                                                                          │ │
+│ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯ │
+│                                                                                                                                                                                  │
+│ C:\Users\SmithR\Downloads\PortableGit\MusicHockeyApp\beeware-venv\Lib\site-packages\briefcase\commands\build.py:124 in __call__                                                  │
+│                                                                                                                                                                                  │
+│   121 │   │                                                                                                                                                                      │
+│   122 │   │   # Confirm host compatibility, that all required tools are available,                                                                                               │
+│   123 │   │   # and that the app configuration is finalized.                                                                                                                     │
+│ ❱ 124 │   │   self.finalize(app)                                                                                                                                                 │
+│   125 │   │                                                                                                                                                                      │
+│   126 │   │   if app:                                                                                                                                                            │
+│   127 │   │   │   state = self._build_app(                                                                                                                                       │
+│                                                                                                                                                                                  │
+│ ╭────────────────────────────────────────────────── locals ──────────────────────────────────────────────────╮                                                                   │
+│ │                 app = None                                                                                 │                                                                   │
+│ │           no_update = False                                                                                │                                                                   │
+│ │             options = {}                                                                                   │                                                                   │
+│ │                self = <briefcase.platforms.android.gradle.GradleBuildCommand object at 0x0000016A84BE9DF0> │                                                                   │
+│ │           test_mode = False                                                                                │                                                                   │
+│ │              update = False                                                                                │                                                                   │
+│ │ update_requirements = False                                                                                │                                                                   │
+│ │    update_resources = False                                                                                │                                                                   │
+│ │         update_stub = False                                                                                │                                                                   │
+│ │      update_support = False                                                                                │                                                                   │
+│ ╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                                   │
+│                                                                                                                                                                                  │
+│ C:\Users\SmithR\Downloads\PortableGit\MusicHockeyApp\beeware-venv\Lib\site-packages\briefcase\commands\base.py:609 in finalize                                                   │
+│                                                                                                                                                                                  │
+│    606 │   │   │   to finalize. By default, all apps will be finalized.                                                                                                          │
+│    607 │   │   """                                                                                                                                                               │
+│    608 │   │   self.verify_host()                                                                                                                                                │
+│ ❱  609 │   │   self.verify_tools()                                                                                                                                               │
+│    610 │   │                                                                                                                                                                     │
+│    611 │   │   if app is None:                                                                                                                                                   │
+│    612 │   │   │   for app in self.apps.values():                                                                                                                                │
+│                                                                                                                                                                                  │
+│ ╭────────────────────────────────────────── locals ───────────────────────────────────────────╮                                                                                  │
+│ │  app = None                                                                                 │                                                                                  │
+│ │ self = <briefcase.platforms.android.gradle.GradleBuildCommand object at 0x0000016A84BE9DF0> │                                                                                  │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────╯                                                                                  │
+│                                                                                                                                                                                  │
+│ C:\Users\SmithR\Downloads\PortableGit\MusicHockeyApp\beeware-venv\Lib\site-packages\briefcase\platforms\android\gradle.py:146 in verify_tools                                    │
+│                                                                                                                                                                                  │
+│   143 │   │   """Verify that the Android APK tools in `briefcase` will operate on this system,                                                                                   │
+│   144 │   │   downloading tools as needed."""                                                                                                                                    │
+│   145 │   │   super().verify_tools()                                                                                                                                             │
+│ ❱ 146 │   │   AndroidSDK.verify(tools=self.tools)                                                                                                                                │
+│   147 │   │   if not self.is_clone:                                                                                                                                              │
+│   148 │   │   │   self.logger.add_log_file_extra(self.tools.android_sdk.list_packages)                                                                                           │
+│   149                                                                                                                                                                            │
+│                                                                                                                                                                                  │
+│ ╭────────────────────────────────────────── locals ───────────────────────────────────────────╮                                                                                  │
+│ │ self = <briefcase.platforms.android.gradle.GradleBuildCommand object at 0x0000016A84BE9DF0> │                                                                                  │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────╯                                                                                  │
+│                                                                                                                                                                                  │
+│ C:\Users\SmithR\Downloads\PortableGit\MusicHockeyApp\beeware-venv\Lib\site-packages\briefcase\integrations\base.py:113 in verify                                                 │
+│                                                                                                                                                                                  │
+│   110 │   │   **kwargs,                                                                                                                                                          │
+│   111 │   ) -> ManagedToolT:                                                                                                                                                     │
+│   112 │   │   """Confirm the managed tool is installed and available."""                                                                                                         │
+│ ❱ 113 │   │   return super().verify(tools=tools, app=app, install=install, **kwargs)                                                                                             │
+│   114 │                                                                                                                                                                          │
+│   115 │   @abstractmethod                                                                                                                                                        │
+│   116 │   def exists(self) -> bool:                                                                                                                                              │
+│                                                                                                                                                                                  │
+│ ╭──────────────────────────────────── locals ────────────────────────────────────╮                                                                                               │
+│ │     app = None                                                                 │                                                                                               │
+│ │ install = True                                                                 │                                                                                               │
+│ │  kwargs = {}                                                                   │                                                                                               │
+│ │   tools = <briefcase.integrations.base.ToolCache object at 0x0000016A84BEA570> │                                                                                               │
+│ ╰────────────────────────────────────────────────────────────────────────────────╯                                                                                               │
+│                                                                                                                                                                                  │
+│ C:\Users\SmithR\Downloads\PortableGit\MusicHockeyApp\beeware-venv\Lib\site-packages\briefcase\integrations\base.py:77 in verify                                                  │
+│                                                                                                                                                                                  │
+│    74 │   ) -> ToolT:                                                                          ╭─────────────────────────────────── locals ────────────────────────────────────╮ │
+│    75 │   │   """Confirm the tool is available and usable on the host platform."""             │    app = None                                                                 │ │
+│    76 │   │   cls.verify_host(tools=tools)                                                     │ kwargs = {'install': True}                                                    │ │
+│ ❱  77 │   │   tool = cls.verify_install(tools=tools, app=app, **kwargs)                        │  tools = <briefcase.integrations.base.ToolCache object at 0x0000016A84BEA570> │ │
+│    78 │   │   return tool                                                                      ╰───────────────────────────────────────────────────────────────────────────────╯ │
+│    79 │                                                                                                                                                                          │
+│    80 │   @classmethod                                                                                                                                                           │
+│                                                                                                                                                                                  │
+│ C:\Users\SmithR\Downloads\PortableGit\MusicHockeyApp\beeware-venv\Lib\site-packages\briefcase\integrations\android_sdk.py:360 in verify_install                                  │
+│                                                                                                                                                                                  │
+│    357 │   │   │   │   sdk.install()                                                                                                                                             │
+│    358 │   │                                                                                                                                                                     │
+│    359 │   │   # Licences must be accepted to use the SDK                                                                                                                        │
+│ ❱  360 │   │   sdk.verify_license()                                                                                                                                              │
+│    361 │   │                                                                                                                                                                     │
+│    362 │   │   tools.logger.debug(f"Using Android SDK at {sdk.root_path}")                                                                                                       │
+│    363 │   │   tools.android_sdk = sdk                                                                                                                                           │
+│                                                                                                                                                                                  │
+│ ╭──────────────────────────────────────────────── locals ─────────────────────────────────────────────────╮                                                                      │
+│ │        install = True                                                                                   │                                                                      │
+│ │         kwargs = {'app': None}                                                                          │                                                                      │
+│ │            sdk = <briefcase.integrations.android_sdk.AndroidSDK object at 0x0000016A84A1D580>           │                                                                      │
+│ │   sdk_root_env = None                                                                                   │                                                                      │
+│ │  sdk_root_path = WindowsPath('C:/Users/SmithR/AppData/Local/BeeWare/briefcase/Cache/tools/android_sdk') │                                                                      │
+│ │ sdk_source_env = None                                                                                   │                                                                      │
+│ │          tools = <briefcase.integrations.base.ToolCache object at 0x0000016A84BEA570>                   │                                                                      │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                                                      │
+│                                                                                                                                                                                  │
+│ C:\Users\SmithR\Downloads\PortableGit\MusicHockeyApp\beeware-venv\Lib\site-packages\briefcase\integrations\android_sdk.py:611 in verify_license                                  │
+│                                                                                                                                                                                  │
+│    608 │   │   │   ) from e                                                                                                                                                      │
+│    609 │   │                                                                                                                                                                     │
+│    610 │   │   if not license_path.exists():                                                                                                                                     │
+│ ❱  611 │   │   │   raise BriefcaseCommandError(                                                                                                                                  │
+│    612 │   │   │   │   """\                                                                                                                                                      │
+│    613 You did not accept the Android SDK licenses. Please re-run the briefcase command                                                                                          │
+│    614 and accept the Android SDK license when prompted. You may need an Internet                                                                                                │
+│                                                                                                                                                                                  │
+│ ╭────────────────────────────────────────────────────────────── locals ──────────────────────────────────────────────────────────────╮                                           │
+│ │ license_path = WindowsPath('C:/Users/SmithR/AppData/Local/BeeWare/briefcase/Cache/tools/android_sdk/licenses/android-sdk-license') │                                           │
+│ │         self = <briefcase.integrations.android_sdk.AndroidSDK object at 0x0000016A84A1D580>                                        │                                           │
+│ ╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                                           │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+BriefcaseCommandError: You did not accept the Android SDK licenses. Please re-run the briefcase command
+and accept the Android SDK license when prompted. You may need an Internet
+connection.
+
