@@ -80,9 +80,15 @@ class HelloWorld(toga.App):
         self.add_album_questions = False
 
         name=self.album_questions_name_input.value
-        self.albums.append(Album(name, self))
+        self.albums.append(Album(name, self, len(self.albums)))
         self.main_page()
 
+    def delete_album(self, number, what=None):
+        self.albums.remove(self.albums[number])
+        for i in range(len(self.albums)-number):
+            i+=number
+            self.albums[i].number-=1
+        self.main_page()
 
 def main():
     return HelloWorld("hockey music", "the Smith Project")
