@@ -3,6 +3,7 @@ Plays music and sound effects required during hockey game
 """
 
 import toga
+from toga import App, paths
 from toga.style import Pack
 from toga.style.pack import RIGHT, LEFT, COLUMN, CENTER, ROW, Pack
 import re
@@ -13,6 +14,7 @@ from pydub import AudioSegment
 import subprocess
 import traceback
 import os
+from musichockeyapp.album import Album
 
 
 
@@ -34,7 +36,7 @@ def download_audio_ytdlp(url, save_path='.'):
             'format': 'bestaudio/best',  # Use best audio format
             'outtmpl': f'{save_path}/%(title)s.%(ext)s',  # Save with title as filename
             'noplaylist': True,  # Don't download playlists, only the single video
-            
+
         }
 
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
@@ -61,47 +63,26 @@ def segment_audio(input_path, start_time_ms, end_time_ms, output_path):
     except Exception as e:
         print(f"An error occurred during audio segmentation: {e}")
 
-class MusicHockeyApp(toga.App):
-    def startup(self, what=None):
-        """Construct and show the Toga application.
-
+class MusicHockeyApp(App):
+    def startup(self):
+        
+        """
         Usually, you would add your application to a main content box.
         We then create a main window (with a name matching the app), and
         show the main window.
         """
-        box = toga.Box()
-        box.style.update(direction=COLUMN)
 
-        add_box = toga.Box(style=Pack(background_color="#686868"))
-        music_fill_lable = toga.Label("",style=Pack(flex=1,background_color="#686868"))
-        music_import_button = toga.Button("Import", on_press=self._import, style=Pack(text_align=RIGHT,font_size=10,padding=(5,5,5,0)))
-        music_add_button = toga.Button("+", style=Pack(text_align=RIGHT, font_size=10, padding=(5,20,5,5)))
-        add_box.add(music_fill_lable)
-        add_box.add(music_import_button)
-        add_box.add(music_add_button)
-
-        music_list_box = toga.Box(style=Pack(direction=COLUMN,flex=1))
-        for i in range(20):
-            example_song = toga.Button(f"Music Example {i}", style=Pack(height=40,flex=1))
-            music_list_box.add(example_song)
-        music_list_scroll_box = toga.ScrollContainer(vertical=True, style=Pack(direction=COLUMN, flex=1), content=music_list_box)
-
-
-        sound_board_box = toga.Box(style=Pack(background_color="#686868"))
-        sound_board_fill_label = toga.Label("",style=Pack(flex=1,background_color="#686868"))
-        sound_board_button = toga.Button("Sound Board", style=Pack(text_align=RIGHT, font_size=10, padding=(10,20,10,0)))
-        sound_board_box.add(sound_board_fill_label)
-        sound_board_box.add(sound_board_button)
-
-        box.add(add_box)
-        box.add(music_list_scroll_box)
-        box.add(sound_board_box)
+        self.albums=[]
+        self.add_album_questions = False
+        self.main_page()
+        
+    def refresh_page(self,content,what=None):
         try:
             if self.main_window == None:
                 pass
         except ValueError:
             self.main_window = toga.MainWindow(title=self.formal_name)
-        self.main_window.content = box
+        self.main_window.content = content
         self.main_window.show()
 
     def _import(self, widget):
@@ -124,7 +105,7 @@ class MusicHockeyApp(toga.App):
 
         youtube_url_submit = toga.Button("Submit", on_press=self.download_and_trim, style=Pack(width=150, text_align=CENTER,font_size=10,padding=(5,0,5,0)))
         self.status_label = toga.Label(text="", style=Pack(width=300))
-        back_button = toga.Button("Back", on_press=self.startup,style=Pack(width=150, text_align=RIGHT, font_size=10,padding=(5,0,5,0)))
+        back_button = toga.Button("Back", on_press=self.main_page,style=Pack(width=150, text_align=RIGHT, font_size=10,padding=(5,0,5,0)))
 
         import_box_outer.add(first_box)
         import_box_outer.add(second_box)
@@ -151,22 +132,103 @@ class MusicHockeyApp(toga.App):
                 return
             self.status_label.text = "Downloading audio..."
 
-            project_dir = os.path.dirname(os.path.abspath(__file__))
+            project_dir = self.paths.data
             download_dir = os.path.join(project_dir, 'downloadsounds')
             if not os.path.exists(download_dir):
                 os.makedirs(download_dir)  # Create the directory if it doesn't exist
 
             downloaded_audio_path = download_audio_ytdlp(url, save_path=download_dir)
-            
+
             if downloaded_audio_path:
                 self.status_label.text = "Trimming audio..."
-                output_path = os.path.join(project_dir,"downloadsounds/trimmed_audio.mp3")
+
+                # Extract the video title (without extension) to use as the output file name
+                video_title = os.path.splitext(os.path.basename(downloaded_audio_path))[0]
+                
+                # Create the output path using the video title
+                output_path = os.path.join(download_dir, f"{video_title}_trimmed.mp3")
+                
+                # Segment the audio (cut it based on start and end time)
                 segment_audio(downloaded_audio_path, start_time, end_time, output_path)
+
+                # Update the status
                 self.status_label.text = f"Audio saved as {output_path}"
 
         except Exception as e:
             self.status_label.text = f"An error occurred: {e}"
-    
+
+    def main_page(self, what=None):
+        self.box = toga.Box(style=Pack(direction=COLUMN))
+
+        album_add_box = toga.Box(style=Pack(background_color="#686868"))
+        album_fill_label = toga.Label("", style=Pack(flex=1, background_color="#686868"))
+        album_import_button = toga.Button("Import", on_press=self._import, style=Pack(text_align=RIGHT, font_size=10, padding=(5, 5, 5, 0)))
+        album_add_button = toga.Button("+", style=Pack(text_align=RIGHT, font_size=10, padding=(5, 20, 5, 5)),on_press=self.open_album_questions)
+        album_add_box.add(album_fill_label)
+        album_add_box.add(album_import_button)
+        album_add_box.add(album_add_button)
+
+        album_questions_box = toga.Box(style=Pack(background_color="#7b7b7b"))
+        album_questions_label = toga.Label("", style=Pack(flex=1.5, background_color="#7b7b7b"))
+        album_questions_answers_box = toga.Box(style=Pack(direction=COLUMN, background_color="#7b7b7b", flex=1))
+        album_questions_input_box = toga.Box(style=Pack(background_color="#7b7b7b", padding=(0,0,0,0)))
+        album_questions_name_input_title = toga.Label("Album name:", style=Pack(text_align=RIGHT, font_size=10, background_color="#7b7b7b", color="#ffffff", padding = (10, 0, 5, 5)))
+        self.album_questions_name_input = toga.TextInput(style=Pack(flex=1, padding=(10, 20, 5, 5)))
+        album_questions_input_box.add(album_questions_name_input_title)
+        album_questions_input_box.add(self.album_questions_name_input)
+        album_questions_answers_box.add(album_questions_input_box)
+        album_questions_buttons_box = toga.Box(style=Pack(background_color="#7b7b7b"))
+        album_questions_close_button = toga.Button("X", style=Pack(text_align=LEFT, font_size=10, padding=(0, 0, 5, 5)),on_press=self.close_album_questions)
+        album_questions_submit_button = toga.Button("Submit",style=Pack(text_align=RIGHT, font_size=10, padding=(0, 20, 5, 5),flex=1),on_press=self.add_album_fun)
+        album_questions_buttons_box.add(album_questions_close_button)
+        album_questions_buttons_box.add(album_questions_submit_button)
+        album_questions_answers_box.add(album_questions_buttons_box)
+        album_questions_box.add(album_questions_label)
+        album_questions_box.add(album_questions_answers_box)
+
+        album_list_box = toga.Box(style=Pack(direction=COLUMN, flex=1))
+        for i in range(len(self.albums)):
+            album = self.albums[i].build()
+            album_list_box.add(album)
+        album_list_scroll_box = toga.ScrollContainer(vertical=True, style=Pack(direction=COLUMN, flex=1),content=album_list_box)
+
+        self.sound_board_box = toga.Box(style=Pack(background_color="#686868"))
+        self.sound_board_fill_label = toga.Label("", style=Pack(flex=1, background_color="#686868"))
+        self.sound_board_button = toga.Button("Sound Board",style=Pack(text_align=RIGHT, font_size=10, padding=(10, 20, 10, 0)))
+        self.sound_board_box.add(self.sound_board_fill_label)
+        self.sound_board_box.add(self.sound_board_button)
+
+        self.box.add(album_add_box)
+        if self.add_album_questions == True:
+            self.box.add(album_questions_box)
+        self.box.add(album_list_scroll_box)
+        self.box.add(self.sound_board_box)
+
+        self.refresh_page(self.box)
+
+    def open_album_questions(self,what=None):
+
+        self.add_album_questions = True
+        self.main_page()
+
+    def close_album_questions(self, what=None):
+        self.add_album_questions = False
+        self.main_page()
+
+    def add_album_fun(self, what=None):
+
+        self.add_album_questions = False
+
+        name=self.album_questions_name_input.value
+        self.albums.append(Album(name, self, len(self.albums)))
+        self.main_page()
+
+    def delete_album(self, number, what=None):
+        self.albums.remove(self.albums[number])
+        for i in range(len(self.albums)-number):
+            i+=number
+            self.albums[i].number-=1
+        self.main_page()
 
 def main():
     return MusicHockeyApp()
