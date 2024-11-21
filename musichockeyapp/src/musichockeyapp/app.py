@@ -24,6 +24,13 @@ class HelloWorld(toga.App):
 
         self.current_page= "main_page"
 
+        #these are border lines
+        self.black_line_border_box1 = toga.Box(style=Pack(height=4,background_color="#000000"))
+        self.black_line_border_box2 = toga.Box(style=Pack(height=4, background_color="#4e4e4e"))
+        self.black_line_border_box3 = toga.Box(style=Pack(height=4, background_color="#4e4e4e"))
+        self.black_line_border_box4 = toga.Box(style=Pack(height=4, background_color="#000000"))
+
+        #this is the top bar that contains the add and import button
         album_add_box = toga.Box(style=Pack(background_color="#800000"))
         album_fill_label = toga.Label("", style=Pack(flex=1, background_color="#800000"))
         album_import_button = toga.Button("Import", style=Pack(text_align=RIGHT, font_size=10, padding=(5, 5, 5, 0)))
@@ -32,6 +39,7 @@ class HelloWorld(toga.App):
         album_add_box.add(album_import_button)
         album_add_box.add(album_add_button)
 
+        #this is the box that opens to the top that can add new albums
         album_questions_box = toga.Box(style=Pack(background_color="#808080"))
         album_questions_label = toga.Label("", style=Pack(flex=1.5, background_color="#808080"))
         album_questions_answers_box = toga.Box(style=Pack(direction=COLUMN, background_color="#808080", flex=1))
@@ -48,27 +56,35 @@ class HelloWorld(toga.App):
         album_questions_box.add(album_questions_label)
         album_questions_box.add(album_questions_answers_box)
 
+        #this is the box that contains albums
         album_list_box = toga.Box(style=Pack(direction=COLUMN, flex=1, background_color="#ffffff"))
         for i in range(len(self.albums)):
             album = self.albums[i].build()
             album_list_box.add(album)
         album_list_scroll_box = toga.ScrollContainer(vertical=True, style=Pack(direction=COLUMN, flex=1),content=album_list_box)
 
+        #this is the soundboard box that can open
         self.sound_board_box = toga.Box(style=Pack(background_color="#808080"))
         self.sound_board_scroll_box = toga.ScrollContainer(vertical=True, style=Pack(direction=COLUMN, height=60, background_color="#6f6cf6"),content=self.sound_board_box)
 
+        #this is the bottom box that holds the sound board button
         self.sound_board_button_box = toga.Box(style=Pack(background_color="#800000"))
         self.sound_board_button_fill_label = toga.Label("", style=Pack(flex=1, background_color="#800000"))
         self.sound_board_button_button = toga.Button("Sound Board",style=Pack(text_align=RIGHT, font_size=10, padding=(10, 20, 10, 0)),on_press=self.toggel_sound_board)
         self.sound_board_button_box.add(self.sound_board_button_fill_label)
         self.sound_board_button_box.add(self.sound_board_button_button)
 
+        #this is the compile wherer you add all the parts together
         self.box.add(album_add_box)
+        self.box.add(self.black_line_border_box1)
         if self.add_album_questions == True:
             self.box.add(album_questions_box)
+            self.box.add(self.black_line_border_box2)
         self.box.add(album_list_scroll_box)
         if self.sound_board_open == True:
+            self.box.add(self.black_line_border_box3)
             self.box.add(self.sound_board_scroll_box)
+        self.box.add(self.black_line_border_box4)
         self.box.add(self.sound_board_button_box)
 
         self.refresh_page(self.box)
