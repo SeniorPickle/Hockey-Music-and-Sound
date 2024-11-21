@@ -20,7 +20,6 @@ class HelloWorld(toga.App):
         self.main_window.show()
 
     def main_page(self, what=None):
-        self.box = toga.Box(style=Pack(direction=COLUMN))
 
         self.current_page= "main_page"
 
@@ -31,16 +30,16 @@ class HelloWorld(toga.App):
         self.black_line_border_box4 = toga.Box(style=Pack(height=4, background_color="#000000"))
 
         #this is the top bar that contains the add and import button
-        album_add_box = toga.Box(style=Pack(background_color="#800000"))
+        self.album_add_box = toga.Box(style=Pack(background_color="#800000"))
         album_fill_label = toga.Label("", style=Pack(flex=1, background_color="#800000"))
         album_import_button = toga.Button("Import", style=Pack(text_align=RIGHT, font_size=10, padding=(5, 5, 5, 0)))
         album_add_button = toga.Button("+", style=Pack(text_align=RIGHT, font_size=10, padding=(5, 20, 5, 5)),on_press=self.open_album_questions)
-        album_add_box.add(album_fill_label)
-        album_add_box.add(album_import_button)
-        album_add_box.add(album_add_button)
+        self.album_add_box.add(album_fill_label)
+        self.album_add_box.add(album_import_button)
+        self.album_add_box.add(album_add_button)
 
         #this is the box that opens to the top that can add new albums
-        album_questions_box = toga.Box(style=Pack(background_color="#808080"))
+        self.album_questions_box = toga.Box(style=Pack(background_color="#808080"))
         album_questions_label = toga.Label("", style=Pack(flex=1.5, background_color="#808080"))
         album_questions_answers_box = toga.Box(style=Pack(direction=COLUMN, background_color="#808080", flex=1))
         album_questions_input_box = toga.Box(style=Pack(background_color="#808080", padding=(0,0,0,0)))
@@ -53,15 +52,15 @@ class HelloWorld(toga.App):
         album_questions_buttons_box.add(album_questions_close_button)
         album_questions_buttons_box.add(album_questions_submit_button)
         album_questions_answers_box.add(album_questions_buttons_box)
-        album_questions_box.add(album_questions_label)
-        album_questions_box.add(album_questions_answers_box)
+        self.album_questions_box.add(album_questions_label)
+        self.album_questions_box.add(album_questions_answers_box)
 
         #this is the box that contains albums
         album_list_box = toga.Box(style=Pack(direction=COLUMN, flex=1, background_color="#ffffff"))
         for i in range(len(self.albums)):
             album = self.albums[i].build()
             album_list_box.add(album)
-        album_list_scroll_box = toga.ScrollContainer(vertical=True, style=Pack(direction=COLUMN, flex=1),content=album_list_box)
+        self.album_list_scroll_box = toga.ScrollContainer(vertical=True, style=Pack(direction=COLUMN, flex=1),content=album_list_box)
 
         #this is the soundboard box that can open
         self.sound_board_box = toga.Box(style=Pack(background_color="#808080"))
@@ -74,13 +73,18 @@ class HelloWorld(toga.App):
         self.sound_board_button_box.add(self.sound_board_button_fill_label)
         self.sound_board_button_box.add(self.sound_board_button_button)
 
+        self.refresh_box()
+
+    def refresh_box(self, what=None):
+        self.box = toga.Box(style=Pack(direction=COLUMN))
+
         #this is the compile wherer you add all the parts together
-        self.box.add(album_add_box)
+        self.box.add(self.album_add_box)
         self.box.add(self.black_line_border_box1)
         if self.add_album_questions == True:
-            self.box.add(album_questions_box)
+            self.box.add(self.album_questions_box)
             self.box.add(self.black_line_border_box2)
-        self.box.add(album_list_scroll_box)
+        self.box.add(self.album_list_scroll_box)
         if self.sound_board_open == True:
             self.box.add(self.black_line_border_box3)
             self.box.add(self.sound_board_scroll_box)
@@ -91,11 +95,11 @@ class HelloWorld(toga.App):
 
     def open_album_questions(self,what=None):
         self.add_album_questions = True
-        self.main_page()
+        self.refresh_box()
 
     def close_album_questions(self, what=None):
         self.add_album_questions = False
-        self.main_page()
+        self.refresh_box()
 
     def add_album_fun(self, what=None):
         self.add_album_questions = False
@@ -119,7 +123,7 @@ class HelloWorld(toga.App):
         if self.current_page == "main_page":
             self.main_page()
         else:
-            self.albums[0].open_album()
+            self.albums[0].refresh_album_box()
 
 def main():
     return HelloWorld("hockey music", "the Smith Project")
