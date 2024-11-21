@@ -105,6 +105,8 @@ class HelloWorld(toga.App):
         self.add_album_questions = False
 
         name=self.album_questions_name_input.value
+        if len(name) > 25:
+            name=name[:25]+"..."
         self.albums.append(Album(name, self, len(self.albums)))
         self.main_page()
 

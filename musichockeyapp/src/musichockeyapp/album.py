@@ -26,7 +26,7 @@ class Album():
 
         self.music_add_box = toga.Box(style=Pack(background_color="#800000"))
         music_back_button = toga.Button("X", style=Pack(text_align=LEFT, font_size=10, padding=(5, 0, 5, 20)),on_press=self.app.main_page)
-        music_add_label = toga.Label(self.formal_name, style=Pack(flex=1, background_color="#800000", color="#ffffff",text_align=CENTER, font_size=20))
+        music_add_label = toga.Label(self.formal_name, style=Pack(flex=1, background_color="#800000", color="#ffffff",text_align=CENTER, font_size=15))
         music_add_button = toga.Button("+", style=Pack(text_align=RIGHT, font_size=10, padding=(5, 20, 5, 0)))
         self.music_add_box.add(music_back_button)
         self.music_add_box.add(music_add_label)
