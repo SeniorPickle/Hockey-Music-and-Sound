@@ -113,7 +113,7 @@ class MusicHockeyApp(App):
 
         self.refresh_page(self.box)
 
-    def _import(self, widget):
+    def _import(self, album_iteration, widget):
         self.current_page= "_import"
 
         width, height = self.main_window.size
@@ -135,7 +135,7 @@ class MusicHockeyApp(App):
 
         youtube_url_submit = toga.Button("Submit", on_press=self.download_and_trim, style=Pack(width=150, text_align=CENTER,font_size=10,padding=(5,0,5,0)))
         self.status_label = toga.Label(text="", style=Pack(width=300))
-        back_button = toga.Button("Back", on_press=self.main_page,style=Pack(width=150, text_align=RIGHT, font_size=10,padding=(5,0,5,0)))
+        back_button = toga.Button("Back", on_press=self.albums[album_iteration].open_album,style=Pack(width=150, text_align=RIGHT, font_size=10,padding=(5,0,5,0)))
 
         import_box_outer.add(first_box)
         import_box_outer.add(second_box)
@@ -209,7 +209,7 @@ class MusicHockeyApp(App):
          #this is the top bar that contains the add and import button
         self.album_add_box = toga.Box(style=Pack(background_color="#800000"))
         album_fill_label = toga.Label("", style=Pack(flex=1, background_color="#800000"))
-        album_import_button = toga.Button("Import", on_press=self._import, style=Pack(text_align=RIGHT, font_size=10, padding=(5, 5, 5, 0)))
+        album_import_button = toga.Button("Import", style=Pack(text_align=RIGHT, font_size=10, padding=(5, 5, 5, 0)))
         album_add_button = toga.Button("+", style=Pack(text_align=RIGHT, font_size=10, padding=(5, 20, 5, 5)),on_press=self.open_album_questions)
         self.album_add_box.add(album_fill_label)
         self.album_add_box.add(album_import_button)
