@@ -17,10 +17,6 @@ import os
 from musichockeyapp.album import Album
 
 
-
-api_key = 'AIzaSyChY31_cLFs98C-J4-gLv2JASmzTO9DbHo'
-youtube = build('youtube', 'v3', developerKey=api_key)
-
 # Check if ffmpeg is installed
 def is_ffmpeg_installed():
     try:
@@ -168,10 +164,11 @@ class MusicHockeyApp(App):
                 return
             self.status_label.text = "Downloading audio..."
 
-            project_dir = self.paths.data
-            download_dir = os.path.join(project_dir, 'downloadsounds')
-            if not os.path.exists(download_dir):
-                os.makedirs(download_dir)  # Create the directory if it doesn't exist
+            project_cache_dir = self.paths.cache
+            download_webm_dir = os.path.join(project_cache_dir, 'downloadsounds')
+            if not os.path.exists(download_webm_dir):
+                os.makedirs(download_webm_dir)  # Create the directory if it doesn't exist
+            print(download_webm_dir)
 
             downloaded_audio_path = download_audio_ytdlp(url, save_path=download_dir)
 
@@ -182,6 +179,11 @@ class MusicHockeyApp(App):
                 video_title = os.path.splitext(os.path.basename(downloaded_audio_path))[0]
                 
                 # Create the output path using the video title
+                project_dir = self.paths.data
+                download_dir = os.path.join(project_dir, 'music')
+                if not os.path.exists(download_dir):
+                    os.makedirs(download_dir)  # Create the directory if it doesn't exist
+                    
                 output_path = os.path.join(download_dir, f"{video_title}_trimmed.mp3")
                 
                 # Segment the audio (cut it based on start and end time)
