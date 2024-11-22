@@ -7,14 +7,12 @@ from toga import App, paths
 from toga.style import Pack
 from toga.style.pack import RIGHT, LEFT, COLUMN, CENTER, ROW, Pack
 import re
-from googleapiclient.discovery import build
 import yt_dlp
-from pytube import YouTube
 from pydub import AudioSegment
 import subprocess
 import traceback
 import os
-from musichockeyapp.album import Album
+from album import Album
 
 
 # Check if ffmpeg is installed
@@ -170,7 +168,7 @@ class MusicHockeyApp(App):
                 os.makedirs(download_webm_dir)  # Create the directory if it doesn't exist
             print(download_webm_dir)
 
-            downloaded_audio_path = download_audio_ytdlp(url, save_path=download_dir)
+            downloaded_audio_path = download_audio_ytdlp(url, save_path=download_webm_dir)
 
             if downloaded_audio_path:
                 self.status_label.text = "Trimming audio..."
@@ -270,7 +268,7 @@ class MusicHockeyApp(App):
         self.albums.append(Album(name, self, len(self.albums)))
         
         project_dir = self.paths.data
-        new_album_dir = os.path.join(project_dir, f'albums\{name}')
+        new_album_dir = os.path.join(project_dir, f'albums\\{name}')
         if not os.path.exists(new_album_dir):
                 os.makedirs(new_album_dir)
         else:
@@ -306,4 +304,4 @@ class MusicHockeyApp(App):
         else:
             self.albums[0].refresh_album_box()
 def main():
-    return MusicHockeyApp()
+    return MusicHockeyApp("Balls", "Sweaty")
