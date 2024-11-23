@@ -74,8 +74,8 @@ class MusicHockeyApp(App):
         self.albums=[]
         for entry in os.scandir(album_dir):
             if entry.is_dir():
-                print(entry.name)
-                self.albums.append(Album(entry.name, self, len(self.albums)))
+                specific_album_dir=os.path.join(album_dir, entry.name)
+                self.albums.append(Album(entry.name, self, len(self.albums), specific_album_dir))
         project_dir = self.paths.data
         album_dir = os.path.join(project_dir, 'albums')
         if not os.path.exists(album_dir):
@@ -115,6 +115,7 @@ class MusicHockeyApp(App):
 
     def _import(self, album_iteration, widget):
         self.current_page= "_import"
+        self.temp_album_iteration=album_iteration
 
         width, height = self.main_window.size
         import_box_outer = toga.Box(style=Pack(direction=COLUMN))
@@ -123,6 +124,8 @@ class MusicHockeyApp(App):
 
         self.youtube_url_input = toga.TextInput(style=Pack(width=150, text_align=CENTER,font_size=10,padding=(5,0,5,0)))
         self.youtube_url_input.placeholder = "Youtube Url"
+
+        self.song_name_input = toga.TextInput(placeholder="Name", style=Pack(width=150, text_align=CENTER,font_size=10,padding=(5,0,5,0)))
 
         second_box= toga.Box(style=Pack(width=150, padding=(5,0,-5,width/2-150)))
 
@@ -135,12 +138,13 @@ class MusicHockeyApp(App):
 
         youtube_url_submit = toga.Button("Submit", on_press=self.download_and_trim, style=Pack(width=150, text_align=CENTER,font_size=10,padding=(5,0,5,0)))
         self.status_label = toga.Label(text="", style=Pack(width=300))
-        back_button = toga.Button("Back", on_press=self.albums[album_iteration].open_album,style=Pack(width=150, text_align=RIGHT, font_size=10,padding=(5,0,5,0)))
+        back_button = toga.Button("Back", on_press=self.albums[self.temp_album_iteration].open_album,style=Pack(width=150, text_align=RIGHT, font_size=10,padding=(5,0,5,0)))
 
         import_box_outer.add(first_box)
         import_box_outer.add(second_box)
         import_box_outer.add(third_box)
         first_box.add(self.youtube_url_input)
+        first_box.add(self.song_name_input)
         second_box.add(self.start_time_input)
         second_box.add(self.end_time_input)
         third_box.add(youtube_url_submit)
@@ -178,11 +182,12 @@ class MusicHockeyApp(App):
                 
                 # Create the output path using the video title
                 project_dir = self.paths.data
-                download_dir = os.path.join(project_dir, 'music')
-                if not os.path.exists(download_dir):
-                    os.makedirs(download_dir)  # Create the directory if it doesn't exist
+                albums_dir = os.path.join(project_dir, 'albums')
+                album_dir = os.path.join(albums_dir, self.albums[self.temp_album_iteration].formal_name)
+                if not os.path.exists(album_dir):
+                    os.makedirs(album_dir)  # Create the directory if it doesn't exist
                     
-                output_path = os.path.join(download_dir, f"{video_title}_trimmed.mp3")
+                output_path = os.path.join(album_dir, f"{video_title}_trimmed.mp3")
                 
                 # Segment the audio (cut it based on start and end time)
                 segment_audio(downloaded_audio_path, start_time, end_time, output_path)
@@ -199,7 +204,7 @@ class MusicHockeyApp(App):
 
         self.current_page= "main_page"
 
-        #these are border lines
+        #these are border lines cant reuse them for some reason
         self.black_line_border_box1 = toga.Box(style=Pack(height=4,background_color="#000000"))
         self.black_line_border_box2 = toga.Box(style=Pack(height=4, background_color="#4e4e4e"))
         self.black_line_border_box3 = toga.Box(style=Pack(height=4, background_color="#4e4e4e"))
@@ -252,7 +257,6 @@ class MusicHockeyApp(App):
         self.refresh_box()
 
     def open_album_questions(self,what=None):
-
         self.add_album_questions = True
         self.main_page()
 
@@ -261,11 +265,18 @@ class MusicHockeyApp(App):
         self.main_page()
 
     def add_album_fun(self, what=None):
-
         self.add_album_questions = False
 
         name=self.album_questions_name_input.value
-        self.albums.append(Album(name, self, len(self.albums)))
+        if len(name) > 25:
+            name = name[:25] + "..."
+
+        project_dir = self.paths.data
+        album_dir = os.path.join(project_dir, 'albums')
+        specific_album_dir = os.path.join(album_dir, name)
+        os.makedirs(specific_album_dir)
+
+        self.albums.append(Album(name, self, len(self.albums), specific_album_dir))
         
         project_dir = self.paths.data
         new_album_dir = os.path.join(project_dir, f'albums\\{name}')
@@ -304,4 +315,4 @@ class MusicHockeyApp(App):
         else:
             self.albums[0].refresh_album_box()
 def main():
-    return MusicHockeyApp("Balls", "Sweaty")
+    return MusicHockeyApp("hockey music", "The smith project")

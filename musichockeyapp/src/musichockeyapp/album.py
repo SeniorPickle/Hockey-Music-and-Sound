@@ -2,10 +2,11 @@ import toga
 from toga.style.pack import RIGHT, LEFT, COLUMN, CENTER, ROW, Pack
 
 class Album():
-    def __init__(self, name, app, number, contents=[]):
+    def __init__(self, name, app, number, path, contents=[]):
         self.formal_name = name
         self.app = app
         self.number = number
+        self.path = path
         self.contents = contents
 
     def build(self, what=None):
