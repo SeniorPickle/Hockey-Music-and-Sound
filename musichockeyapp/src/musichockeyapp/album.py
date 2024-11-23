@@ -1,13 +1,18 @@
 import toga
 from toga.style.pack import RIGHT, LEFT, COLUMN, CENTER, ROW, Pack
+from music import Music
+import os
 
 class Album():
-    def __init__(self, name, app, number, path, contents=[]):
+    def __init__(self, name, app, number, path):
         self.formal_name = name
         self.app = app
         self.number = number
         self.path = path
-        self.contents = contents
+        self.contents = []
+        for entry in os.scandir(self.path):
+            song_path = os.path.join(self.path, entry.name)
+            self.contents.append(Music(self, entry.name, len(self.contents), song_path))
 
     def build(self, what=None):
 
@@ -37,6 +42,8 @@ class Album():
         self.music_add_box.add(music_add_button)
 
         music_list_box = toga.Box(style=Pack(direction=COLUMN, flex=1))
+        for entry in self.contents:
+            music_list_box.add(entry.build())
         self.music_list_scroll_box = toga.ScrollContainer(vertical=True, style=Pack(direction=COLUMN, flex=1),content=music_list_box)
 
         self.refresh_album_box()
@@ -55,3 +62,7 @@ class Album():
         self.albumn_box.add(self.app.sound_board_button_box)
 
         self.app.refresh_page(self.albumn_box)
+
+    def add_music(self, name, path):
+        self.contents.append(Music(self, name, len(self.contents), path))
+        self.open_album()

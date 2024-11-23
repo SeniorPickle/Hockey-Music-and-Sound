@@ -85,6 +85,7 @@ class MusicHockeyApp(App):
         self.current_page = None
         self.add_album_questions = False
         self.main_page()
+        self.music_playing=[[None,None],False, False]
         
     def refresh_page(self,content,what=None):
         try:
@@ -186,13 +187,15 @@ class MusicHockeyApp(App):
                 album_dir = os.path.join(albums_dir, self.albums[self.temp_album_iteration].formal_name)
                 if not os.path.exists(album_dir):
                     os.makedirs(album_dir)  # Create the directory if it doesn't exist
-                    
-                output_path = os.path.join(album_dir, f"{video_title}_trimmed.mp3")
-                
-                # Segment the audio (cut it based on start and end time)
-                segment_audio(downloaded_audio_path, start_time, end_time, output_path)
+                self.albums[self.temp_album_iteration].add_music(self.song_name_input.value, album_dir)
 
+                output_path = os.path.join(album_dir, self.song_name_input.value)
+
+                # Segment the audio (cut it based on start and end time)
+
+                segment_audio(downloaded_audio_path, start_time, end_time, output_path)
                 # Update the status
+
                 self.status_label.text = f"Audio saved as {output_path}"
 
         except Exception as e:
