@@ -46,6 +46,8 @@ class Album():
             music_list_box.add(entry.build())
         self.music_list_scroll_box = toga.ScrollContainer(vertical=True, style=Pack(direction=COLUMN, flex=1),content=music_list_box)
 
+        self.app.redefine_persistent_box()
+
         self.refresh_album_box()
 
 
@@ -59,7 +61,7 @@ class Album():
             self.albumn_box.add(self.app.black_line_border_box3)
             self.albumn_box.add(self.app.sound_board_scroll_box)
         self.albumn_box.add(self.app.black_line_border_box4)
-        self.albumn_box.add(self.app.sound_board_button_box)
+        self.albumn_box.add(self.app.persistent_box)
 
         self.app.refresh_page(self.albumn_box)
 

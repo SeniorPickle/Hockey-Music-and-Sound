@@ -84,8 +84,8 @@ class MusicHockeyApp(App):
         self.sound_board_open = False
         self.current_page = None
         self.add_album_questions = False
+        self.music_playing = [[None,None],False, False]
         self.main_page()
-        self.music_playing=[[None,None],False, False]
         
     def refresh_page(self,content,what=None):
         try:
@@ -110,7 +110,7 @@ class MusicHockeyApp(App):
             self.box.add(self.black_line_border_box3)
             self.box.add(self.sound_board_scroll_box)
         self.box.add(self.black_line_border_box4)
-        self.box.add(self.sound_board_button_box)
+        self.box.add(self.persistent_box)
 
         self.refresh_page(self.box)
 
@@ -217,10 +217,8 @@ class MusicHockeyApp(App):
          #this is the top bar that contains the add and import button
         self.album_add_box = toga.Box(style=Pack(background_color="#800000"))
         album_fill_label = toga.Label("", style=Pack(flex=1, background_color="#800000"))
-        album_import_button = toga.Button("Import", style=Pack(text_align=RIGHT, font_size=10, padding=(5, 5, 5, 0)))
         album_add_button = toga.Button("+", style=Pack(text_align=RIGHT, font_size=10, padding=(5, 20, 5, 5)),on_press=self.open_album_questions)
         self.album_add_box.add(album_fill_label)
-        self.album_add_box.add(album_import_button)
         self.album_add_box.add(album_add_button)
 
         #this is the box that opens to the top that can add new albums
@@ -250,14 +248,58 @@ class MusicHockeyApp(App):
         self.sound_board_box = toga.Box(style=Pack(background_color="#808080"))
         self.sound_board_scroll_box = toga.ScrollContainer(vertical=True, style=Pack(direction=COLUMN, height=60, background_color="#6f6cf6"),content=self.sound_board_box)
 
-        #this is the bottom box that holds the sound board button
-        self.sound_board_button_box = toga.Box(style=Pack(background_color="#800000"))
-        self.sound_board_button_fill_label = toga.Label("", style=Pack(flex=1, background_color="#800000"))
-        self.sound_board_button_button = toga.Button("Sound Board",style=Pack(text_align=RIGHT, font_size=10, padding=(10, 20, 10, 0)),on_press=self.toggel_sound_board)
-        self.sound_board_button_box.add(self.sound_board_button_fill_label)
-        self.sound_board_button_box.add(self.sound_board_button_button)
+        self.redefine_persistent_box()
 
         self.refresh_box()
+
+    def redefine_persistent_box(self):
+        #this really needs to be reorganized it looks like shit
+        # this is the bottom box that holds the sound board button
+        self.persistent_box = toga.Box(style=Pack(background_color="#800000"))
+
+        self.persistent_fill_label = toga.Label("", style=Pack(flex=1, background_color="#800000"))
+
+        self.song_info_box = toga.Box(style=Pack(direction=COLUMN, background_color="#630000"))
+
+        self.song_name_box = toga.Box(style=Pack(background_color="#630000"))
+
+        self.song_manipulation_box = toga.Box(style=Pack(background_color="#630000"))
+
+        self.song_manipulation_label1 = toga.Label("", style=Pack(flex=1, background_color="#630000"))
+        self.last_song_button = toga.Button("<", style=Pack(font_size=7, padding=(10, 10, 10, 30)))
+        self.play_pause_button = toga.Button("|>", style=Pack(font_size=7, padding=(10, 10, 10, 0)))
+        self.next_song_button = toga.Button(">", style=Pack(font_size=7, padding=(10, 30, 10, 0)))
+        self.song_manipulation_label2 = toga.Label("", style=Pack(flex=1, background_color="#630000"))
+
+
+        self.name_spaceing_label1 = toga.Label("", style=Pack(flex=1, background_color="#000000"))
+        if self.music_playing[1] == False:
+            self.song_name_label = toga.Label("Nothing Playing", style=Pack(font_size=10, padding=(10, 10, 10, 10),background_color="#630000"))
+        else:
+            self.song_name_label = toga.Label(self.albums[self.music_playing[0][0]].contents[self.music_playing[0][1]].name,style=Pack(font_size=10, padding=(10, 10, 10, 10), background_color="#630000"))
+        self.name_spaceing_label2 = toga.Label("", style=Pack(flex=1, background_color="#000000"))
+
+
+        self.song_manipulation_box.add(self.song_manipulation_label1)
+        self.song_manipulation_box.add(self.last_song_button)
+        self.song_manipulation_box.add(self.play_pause_button)
+        self.song_manipulation_box.add(self.next_song_button)
+        self.song_manipulation_box.add(self.song_manipulation_label2)
+
+        self.song_name_box.add(self.name_spaceing_label1)
+        self.song_name_box.add(self.song_name_label)
+        self.song_name_box.add(self.name_spaceing_label2)
+
+        self.song_info_box.add(self.song_manipulation_box)
+        self.song_info_box.add(self.song_name_box)
+
+        self.persistent_fill_label2 = toga.Label("", style=Pack(flex=.5, background_color="#800000"))
+        self.persistent_sound_board_button = toga.Button("Sound Board", style=Pack(text_align=RIGHT, font_size=10,padding=(10, 20, 10, 0)),on_press=self.toggel_sound_board)
+
+        self.persistent_box.add(self.persistent_fill_label)
+        self.persistent_box.add(self.song_info_box)
+        self.persistent_box.add(self.persistent_fill_label2)
+        self.persistent_box.add(self.persistent_sound_board_button)
 
     def open_album_questions(self,what=None):
         self.add_album_questions = True
