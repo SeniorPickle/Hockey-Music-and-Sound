@@ -48,4 +48,8 @@ Hockey Music and Sound is an app that integrates with Youtube, allowing users to
 |Learning beeware and toga, creating an app outline|4 hours|read through beeware and toga documentation, watched tutorial videos, made a test prodject, made a app outline|
 |programming the app|4 hours|made a way for the user to add albums and created a class for albums as well as finding a way to change screens|
 |UI|1.5 hours|working on a UI and color pallet includeing the soundboard tab, adding to the albums page and adding a way to delete albums|
+|fixes and more ui|3 hours|revised the style of the app and made some tweaks to code as well as mergeing code with ryan and working out bugs that followed|
+|Adjusting album saveing|2 hours|made it so music would be saved into album folders|
+|music player and ui|4 hours|made new ui for music buttons tied the buttons with the audio files and gave the buttons the ability to play music when clicked|
+|music manipulation buttons|3 hours|put play pause back and forward button on the persistant box allong with the songs name that was playing|
 </details>
