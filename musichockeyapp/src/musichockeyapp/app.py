@@ -13,6 +13,7 @@ import subprocess
 import traceback
 import os
 from album import Album
+import pygame
 
 
 # Check if ffmpeg is installed
@@ -205,8 +206,6 @@ class MusicHockeyApp(App):
 
         self.current_page= "main_page"
 
-        self.current_page= "main_page"
-
         #these are border lines cant reuse them for some reason
         self.black_line_border_box1 = toga.Box(style=Pack(height=4,background_color="#000000"))
         self.black_line_border_box2 = toga.Box(style=Pack(height=4, background_color="#4e4e4e"))
@@ -253,31 +252,34 @@ class MusicHockeyApp(App):
         self.refresh_box()
 
     def redefine_persistent_box(self):
+
         #this really needs to be reorganized it looks like shit
         # this is the bottom box that holds the sound board button
+
         self.persistent_box = toga.Box(style=Pack(background_color="#800000"))
 
         self.persistent_fill_label = toga.Label("", style=Pack(flex=1, background_color="#800000"))
 
-        self.song_info_box = toga.Box(style=Pack(direction=COLUMN, background_color="#630000"))
+        self.song_info_box = toga.Box(style=Pack(direction=COLUMN, background_color="#630000", width=175))
 
-        self.song_name_box = toga.Box(style=Pack(background_color="#630000"))
+        self.song_name_box = toga.Box(style=Pack(flex=1,background_color="#630000"))
 
-        self.song_manipulation_box = toga.Box(style=Pack(background_color="#630000"))
+        self.song_manipulation_box = toga.Box(style=Pack(flex=1, background_color="#630000"))
+
 
         self.song_manipulation_label1 = toga.Label("", style=Pack(flex=1, background_color="#630000"))
-        self.last_song_button = toga.Button("<", style=Pack(font_size=7, padding=(10, 10, 10, 30)))
-        self.play_pause_button = toga.Button("|>", style=Pack(font_size=7, padding=(10, 10, 10, 0)))
-        self.next_song_button = toga.Button(">", style=Pack(font_size=7, padding=(10, 30, 10, 0)))
+        self.last_song_button = toga.Button("<", style=Pack(font_size=7, padding=(10, 10, 0, 30)))
+        self.play_pause_button = toga.Button("|>", style=Pack(font_size=7, padding=(10, 10, 0, 0)), on_press=self.play_pause_button_fun)
+        self.next_song_button = toga.Button(">", style=Pack(font_size=7, padding=(10, 30, 0, 0)))
         self.song_manipulation_label2 = toga.Label("", style=Pack(flex=1, background_color="#630000"))
 
 
-        self.name_spaceing_label1 = toga.Label("", style=Pack(flex=1, background_color="#000000"))
-        if self.music_playing[1] == False:
-            self.song_name_label = toga.Label("Nothing Playing", style=Pack(font_size=10, padding=(10, 10, 10, 10),background_color="#630000"))
+        self.name_spaceing_label1 = toga.Label("", style=Pack(flex=1, background_color="#630000"))
+        if self.music_playing[0] == [None,None]:
+            self.song_name_label = toga.Label("Nothing Playing", style=Pack(flex=1, font_size=10, padding=(3, 0, 10, 0),background_color="#630000"))
         else:
-            self.song_name_label = toga.Label(self.albums[self.music_playing[0][0]].contents[self.music_playing[0][1]].name,style=Pack(font_size=10, padding=(10, 10, 10, 10), background_color="#630000"))
-        self.name_spaceing_label2 = toga.Label("", style=Pack(flex=1, background_color="#000000"))
+            self.song_name_label = toga.Label(self.albums[self.music_playing[0][0]].contents[self.music_playing[0][1]].name, style=Pack(flex=1, font_size=10, padding=(3, 0, 10, 0), background_color="#630000"))
+        self.name_spaceing_label2 = toga.Label("", style=Pack(flex=1, background_color="#630000"))
 
 
         self.song_manipulation_box.add(self.song_manipulation_label1)
@@ -294,7 +296,7 @@ class MusicHockeyApp(App):
         self.song_info_box.add(self.song_name_box)
 
         self.persistent_fill_label2 = toga.Label("", style=Pack(flex=.5, background_color="#800000"))
-        self.persistent_sound_board_button = toga.Button("Sound Board", style=Pack(text_align=RIGHT, font_size=10,padding=(10, 20, 10, 0)),on_press=self.toggel_sound_board)
+        self.persistent_sound_board_button = toga.Button("Sound Board", style=Pack(text_align=RIGHT, font_size=10,padding=(10, 20, 10, 0)), on_press=self.toggle_sound_board)
 
         self.persistent_box.add(self.persistent_fill_label)
         self.persistent_box.add(self.song_info_box)
@@ -350,7 +352,7 @@ class MusicHockeyApp(App):
             self.albums[i].number-=1
         self.main_page()
 
-    def toggel_sound_board(self,what=None):
+    def toggle_sound_board(self, what=None):
         if self.sound_board_open == False:
             self.sound_board_open = True
         else:
@@ -359,5 +361,15 @@ class MusicHockeyApp(App):
             self.main_page()
         else:
             self.albums[0].refresh_album_box()
+
+    def play_pause_button_fun(self,what=None):
+        try:
+            if self.music_playing[0] != [None,None]:
+                self.albums[self.music_playing[0][0]].contents[self.music_playing[0][1]].play()
+            else:
+                pass
+        except TypeError:
+            pass
+
 def main():
     return MusicHockeyApp("hockey music", "The smith project")

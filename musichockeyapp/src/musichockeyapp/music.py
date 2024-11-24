@@ -21,9 +21,7 @@ class Music():
 
     def play(self, what=None):
 
-        print(self.music_playing)
-
-        if self.album.app.music_playing[1] != False:
+        if self.album.app.music_playing[1] != False and self.music_playing != True:
             self.album.app.music_playing[1] = False
             self.album.app.albums[self.album.app.music_playing[0][0]].contents[self.album.app.music_playing[0][1]].music_playing = False
             pygame.mixer.music.pause()
@@ -36,9 +34,13 @@ class Music():
         else:
             self.music_playing = False
             pygame.mixer.music.pause()
-            self.album.app.music_playing = [[None, None], False, False]
+            self.album.app.music_playing[1] = False
 
-        self.album.open_album()
+
+        if self.album.app.music_playing[2] != True:
+            self.album.app.music_playing[2] = True
+            self.album.open_album()
+            self.album.app.music_playing[2] = False
 
     def song_delete(self, what=None):
         pass
