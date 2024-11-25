@@ -14,6 +14,9 @@ import traceback
 import os
 from album import Album
 import pygame
+import time
+from time import sleep
+import asyncio
 
 
 # Check if ffmpeg is installed
@@ -86,7 +89,9 @@ class MusicHockeyApp(App):
         self.current_page = None
         self.add_album_questions = False
         self.music_playing = [[None,None],False, False]
+        self.start_time = time.time()
         self.main_page()
+        asyncio.create_task(self.loop_fun())
         
     def refresh_page(self,content,what=None):
         try:
@@ -268,9 +273,9 @@ class MusicHockeyApp(App):
 
 
         self.song_manipulation_label1 = toga.Label("", style=Pack(flex=1, background_color="#630000"))
-        self.last_song_button = toga.Button("<", style=Pack(font_size=7, padding=(10, 10, 0, 30)))
+        self.last_song_button = toga.Button("<", style=Pack(font_size=7, padding=(10, 10, 0, 30)), on_press=self.last_song_button_fun)
         self.play_pause_button = toga.Button("|>", style=Pack(font_size=7, padding=(10, 10, 0, 0)), on_press=self.play_pause_button_fun)
-        self.next_song_button = toga.Button(">", style=Pack(font_size=7, padding=(10, 30, 0, 0)))
+        self.next_song_button = toga.Button(">", style=Pack(font_size=7, padding=(10, 30, 0, 0)), on_press=self.next_song_button_fun)
         self.song_manipulation_label2 = toga.Label("", style=Pack(flex=1, background_color="#630000"))
 
 
@@ -365,11 +370,28 @@ class MusicHockeyApp(App):
     def play_pause_button_fun(self,what=None):
         try:
             if self.music_playing[0] != [None,None]:
-                self.albums[self.music_playing[0][0]].contents[self.music_playing[0][1]].play()
+                self.albums[self.music_playing[0][0]].contents[self.music_playing[0][1]].play(None, True)
             else:
                 pass
         except TypeError:
             pass
+
+    def next_song_button_fun(self, what=None):
+        if self.music_playing[1] == True:
+            self.albums[self.music_playing[0][0]].contents[self.music_playing[0][1]].forward_play()
+
+    def last_song_button_fun(self, what=None):
+        if self.music_playing[1] == True:
+            self.albums[self.music_playing[0][0]].contents[self.music_playing[0][1]].back_play()
+
+    async def loop_fun(self, what=None):
+        #put all loop tasks in here
+        while True:
+            if self.music_playing[1] == True:
+                self.albums[self.music_playing[0][0]].contents[self.music_playing[0][1]].check_music_playing()
+            await asyncio.sleep(1)
+
+
 
 def main():
     return MusicHockeyApp("hockey music", "The smith project")
