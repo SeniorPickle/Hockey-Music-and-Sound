@@ -52,4 +52,5 @@ Hockey Music and Sound is an app that integrates with Youtube, allowing users to
 |Adjusting album saveing|1 hours|learend about album saveing and made it so music would be saved into album folders|
 |music player and ui|4 hours|made new ui for music buttons tied the buttons with the audio files and gave the buttons the ability to play music when clicked|
 |music manipulation buttons|3 hours|put play pause back and forward button on the persistant box allong with the songs name that was playing|
+|finishing music manipulation buttons|5 hours|made the play pause button work and the forward and back buttons work witch requried makeing new functions for the music class|
 </details>
