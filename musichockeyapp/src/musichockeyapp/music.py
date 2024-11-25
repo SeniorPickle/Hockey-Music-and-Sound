@@ -57,7 +57,11 @@ class Music():
 
         if self.album.app.music_playing[2] != True:
             self.album.app.music_playing[2] = True
-            self.album.open_album()
+            self.album.app.redefine_persistent_box()
+            if self.album.app.current_page == "main_page":
+                self.album.app.refresh_box()
+            else:
+                self.album.refresh_album_box()
             self.album.app.music_playing[2] = False
 
     def check_music_playing(self):

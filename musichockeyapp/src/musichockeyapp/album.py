@@ -2,6 +2,7 @@ import toga
 from toga.style.pack import RIGHT, LEFT, COLUMN, CENTER, ROW, Pack
 from music import Music
 import os
+import importlib
 
 class Album():
     def __init__(self, name, app, number, path):
