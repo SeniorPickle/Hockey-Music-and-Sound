@@ -29,6 +29,7 @@ class Music():
 
         if self.album.app.music_playing[1] != False and self.music_playing != True:
             self.album.app.music_playing[1] = False
+            self.reset_values()
             self.album.app.albums[self.album.app.music_playing[0][0]].contents[self.album.app.music_playing[0][1]].music_playing = False
             pygame.mixer.music.pause()
 
@@ -73,9 +74,11 @@ class Music():
     def forward_play(self, what=None):
         try:
             self.music_playing = False
+            self.reset_values()
             self.album.app.music_playing[0][1] += 1
             self.album.contents[self.album.app.music_playing[0][1]].play()
         except IndexError:
+            self.reset_values()
             self.album.app.music_playing[0][1] = 0
             self.album.contents[self.album.app.music_playing[0][1]].play()
 
@@ -83,14 +86,23 @@ class Music():
         try:
             if ((-1 * (self.start_time_of_music - time.time())) - self.pause_time) <= 5:
                 self.music_playing = False
+                self.reset_values()
                 self.album.app.music_playing[0][1] -= 1
                 self.album.contents[self.album.app.music_playing[0][1]].play()
             else:
-                self.start_time_of_music = 0
+                self.reset_values()
                 self.album.contents[self.album.app.music_playing[0][1]].play()
         except IndexError:
+            self.reset_values()
             self.album.app.music_playing[0][1] = (len(self.album.contents)-1)
             self.album.contents[self.album.app.music_playing[0][1]].play()
+
+    def reset_values(self, what=None):
+        self.start_time_of_music = 0
+        self.time_playing = 0
+        self.start_pause_time = 0
+        self.end_pause_time = 0
+        self.pause_time = 0
 
 
     def song_delete(self, what=None):

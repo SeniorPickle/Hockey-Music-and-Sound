@@ -101,24 +101,6 @@ class MusicHockeyApp(App):
             self.main_window = toga.MainWindow(title=self.formal_name)
         self.main_window.content = content
         self.main_window.show()
-    
-    def refresh_box(self, what=None):
-        self.box = toga.Box(style=Pack(direction=COLUMN))
-
-        #this is the compile wherer you add all the parts together
-        self.box.add(self.album_add_box)
-        self.box.add(self.black_line_border_box1)
-        if self.add_album_questions == True:
-            self.box.add(self.album_questions_box)
-            self.box.add(self.black_line_border_box2)
-        self.box.add(self.album_list_scroll_box)
-        if self.sound_board_open == True:
-            self.box.add(self.black_line_border_box3)
-            self.box.add(self.sound_board_scroll_box)
-        self.box.add(self.black_line_border_box4)
-        self.box.add(self.persistent_box)
-
-        self.refresh_page(self.box)
 
     def _import(self, album_iteration, widget):
         self.current_page= "_import"
@@ -195,7 +177,7 @@ class MusicHockeyApp(App):
                     os.makedirs(album_dir)  # Create the directory if it doesn't exist
                 self.albums[self.temp_album_iteration].add_music(self.song_name_input.value, album_dir)
 
-                output_path = os.path.join(album_dir, self.song_name_input.value)
+                output_path = os.path.join(album_dir, f"{self.song_name_input.value}.mp3")
 
                 # Segment the audio (cut it based on start and end time)
 
@@ -250,7 +232,24 @@ class MusicHockeyApp(App):
 
         #this is the soundboard box that can open
         self.sound_board_box = toga.Box(style=Pack(background_color="#808080"))
-        self.sound_board_scroll_box = toga.ScrollContainer(vertical=True, style=Pack(direction=COLUMN, height=60, background_color="#6f6cf6"),content=self.sound_board_box)
+        #blank presets
+        self.sound_board_button_1 = toga.Button("1", style=Pack(padding=(15, 5, 15, 20)))
+        self.sound_board_button_2 = toga.Button("2", style=Pack(padding=(15, 5, 15, 10)))
+        self.sound_board_button_3 = toga.Button("3", style=Pack(padding=(15, 5, 15, 10)))
+        self.sound_board_button_4 = toga.Button("4", style=Pack(padding=(15, 5, 15, 10)))
+        self.sound_board_button_5 = toga.Button("5", style=Pack(padding=(15, 5, 15, 10)))
+        self.sound_board_button_6 = toga.Button("6", style=Pack(padding=(15, 5, 15, 10)))
+        self.sound_board_button_7 = toga.Button("7", style=Pack(padding=(15, 5, 15, 10)))
+        self.sound_board_button_8 = toga.Button("8", style=Pack(padding=(15, 5, 15, 10)))
+        self.sound_board_box.add(self.sound_board_button_1)
+        self.sound_board_box.add(self.sound_board_button_2)
+        self.sound_board_box.add(self.sound_board_button_3)
+        self.sound_board_box.add(self.sound_board_button_4)
+        self.sound_board_box.add(self.sound_board_button_5)
+        self.sound_board_box.add(self.sound_board_button_6)
+        self.sound_board_box.add(self.sound_board_button_7)
+        self.sound_board_box.add(self.sound_board_button_8)
+        self.sound_board_scroll_box = toga.ScrollContainer(horizontal=True, vertical=False, style=Pack(direction=COLUMN, height=60, background_color="#6f6cf6"),content=self.sound_board_box)
 
         self.redefine_persistent_box()
 
@@ -307,6 +306,24 @@ class MusicHockeyApp(App):
         self.persistent_box.add(self.song_info_box)
         self.persistent_box.add(self.persistent_fill_label2)
         self.persistent_box.add(self.persistent_sound_board_button)
+
+    def refresh_box(self, what=None):
+        self.box = toga.Box(style=Pack(direction=COLUMN))
+
+        #this is the compile wherer you add all the parts together
+        self.box.add(self.album_add_box)
+        self.box.add(self.black_line_border_box1)
+        if self.add_album_questions == True:
+            self.box.add(self.album_questions_box)
+            self.box.add(self.black_line_border_box2)
+        self.box.add(self.album_list_scroll_box)
+        if self.sound_board_open == True:
+            self.box.add(self.black_line_border_box3)
+            self.box.add(self.sound_board_scroll_box)
+        self.box.add(self.black_line_border_box4)
+        self.box.add(self.persistent_box)
+
+        self.refresh_page(self.box)
 
     def open_album_questions(self,what=None):
         self.add_album_questions = True
